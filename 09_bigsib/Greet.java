@@ -1,5 +1,5 @@
 /*
-Lior Polischouk (Toothless), Alif (Grippy), Josiah ()
+Lior Polischouk (Toothless), Alif (Grippy), Josiah (Hedwig)
 APCS
 HW#09: What Are BigSibs Good For?
 10/2/21
