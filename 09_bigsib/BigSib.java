@@ -4,7 +4,7 @@ APCS
 HW#09: What Are BigSibs Good For?
 10/2/21
 */
-public class Greet {
+public class BigSib {
   public static void main (String [] args) {
     greet("Bob");
     greet("Jeff");
