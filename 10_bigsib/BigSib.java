@@ -8,7 +8,7 @@ public class BigSib {
   public static void main (String [] args) {
 
   }
-  public static string greet (String name) {
+  public static String greet (String name) {
     String statement = ("Greetings, " + name + ", how do you do?");
     return statement;
   }
