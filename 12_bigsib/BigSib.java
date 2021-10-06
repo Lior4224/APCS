@@ -11,7 +11,6 @@ public class BigSib {
   public static String greet (String name) {
     String helloMsg;
     String statement = ("Greetings, " + name + ", how do you do?");
-    String helloMsg = statement;
     return statement;
   }
 }
