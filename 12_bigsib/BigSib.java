@@ -10,7 +10,7 @@ public class BigSib {
 
   }
   public String greet (String name) {
-    return (setHelloMsg + name);
+    return (HelloMsg + name);
 
   }
   public String setHelloMsg (String str) {
