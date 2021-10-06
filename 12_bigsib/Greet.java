@@ -18,10 +18,16 @@ public class Greet {
     greeting = daniel.greet("Dr. Spaceman");
     System.out.println(greeting);
     
-/*    System.out.println( BigSib.greet("Bob") );
-    System.out.println( BigSib.greet("Jeff") );
-    System.out.println( BigSib.greet("Daniel") );
-    */
+    BigSib jeff = new BigSib();
+    jeff.setHelloMsg("Hey ya");
+    greeting = jeff.greet("Kong Fooey");
+    System.out.println(greeting);
+    
+    BigSib robert = new BigSib();
+    robert.setHelloMsg("Sup");
+    greeting = robert.greet("mom");
+    System.out.println(greeting);
+    
   }
 }
 /*
