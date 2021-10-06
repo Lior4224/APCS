@@ -10,7 +10,7 @@ public class BigSib {
   }
   public static String greet (String name) {
     String helloMsg;
-    String statement = ("Greetings, " + name + ", how do you do?");
+    String statement = helloMsg + name;
     return statement;
   }
 }
