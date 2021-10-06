@@ -21,3 +21,9 @@ public class BigSib {
     return helloMsg;
   }
 }
+/*
+DISCOVERIES:
+1. Discovered that constructors potentially cut out a full line from each new instance of BigSib.
+UNRESOLVED QUESTIONS:
+1. Is there a way to combine the last two lines as well? (greeting = richard.greet("") and ..println(greeting))
+*/
