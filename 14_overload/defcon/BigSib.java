@@ -6,9 +6,7 @@ HW#14: Customize Your Creation
 */
 public class BigSib {
   String helloMsg;
-  public BigSib(String phrase) {
-    helloMsg = phrase;
-  }
+  
   public BigSib() {
     helloMsg = ("Hello");
   }
