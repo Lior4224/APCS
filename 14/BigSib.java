@@ -5,7 +5,7 @@ public class BigSib {
   }
   public BigSib() {
     double randomNum = Math.random();
-    helloMsg = randomNum.toString();
+    helloMsg = String.valueOf(randomNum);
   }
 
   public String greet (String name) {
