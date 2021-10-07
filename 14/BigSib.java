@@ -4,7 +4,7 @@ public class BigSib {
     helloMsg = phrase;
   }
   public BigSib() {
-    helloMsg = "hello";
+    helloMsg = Math.random();
   }
 
   public String greet (String name) {
