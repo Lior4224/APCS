@@ -22,7 +22,8 @@ public class BigSib {
 }
 /*
 DISCOVERIES:
-1. 
+1. Discovered that defcon (without parameters) takes less work/coding but only outputs one helloMsg (as far as I know), while overcon
+ takes more written lines but can have different helloMsg's.
 UNRESOLVED QUESTIONS:
-1. 
+1. Is it possible to have more than one helloMsg with defcon?
 */
