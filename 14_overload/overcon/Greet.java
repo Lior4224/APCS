@@ -11,7 +11,7 @@ public class Greet {
     greeting = richard.greet("freshman");
     System.out.println(greeting);
     
-    BigSib tracy = new BigSib("Salutations);
+    BigSib tracy = new BigSib("Salutations");
     greeting = tracy.greet("Dr.Spaceman");
     System.out.println(greeting);
   }
