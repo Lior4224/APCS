@@ -3,6 +3,9 @@ public class BigSib {
   public BigSib(String phrase) {
     helloMsg = phrase;
   }
+  public BigSib() {
+    helloMsg = "hello";
+  }
 
   public String greet (String name) {
     return (helloMsg + " " + name);
