@@ -1,3 +1,9 @@
+/*
+Lior Polischouk , Jomin, Brian
+APCS
+HW#14: Customize Your Creation
+10/7/21
+*/
 public class BigSib {
   String helloMsg;
   public BigSib(String phrase) {
@@ -16,3 +22,9 @@ public class BigSib {
     return helloMsg;
   }
 }
+/*
+DISCOVERIES:
+1. 
+UNRESOLVED QUESTIONS:
+1. 
+*/
