@@ -41,20 +41,24 @@ public class BankAccount{
     balance = newBalance;
     return balance;
   }
-  private void printAccountInfo(){
+
+  public void deposit(double depositAmount){
+   double newBalance = balance + depositAmount;
+   balance = newBalance;
+  }
+    
+  public void withdraw(double withdrawAmount){
+    double newBalance = balance - withdrawAmount;
+    balance = newBalance;
+  }
+   
+  public void toString(){
     System.out.println("Your full name is: " + fullName); //do we reference setFullName or just fullName?
    System.out.println("Your password is: " + password);
    System.out.println("Your account PIN is: " + accountPin);
    System.out.println("Your account number is: " + accountNumber);
    System.out.println("Your balance is: " + balance);
   }
-  public void deposit(double depositAmount){
-   double newBalance = balance + depositAmount;
-   balance = newBalance;
-    
-  public void withdraw(double withdrawAmount){
-    double newBalance = balance - withdrawAmount;
-    balance = newBalance;
 
   public static void main(String[] args){
     BankAccount account = new BankAccount();
@@ -63,6 +67,6 @@ public class BankAccount{
     account.setPin(5678);
     account.setAcctNum(123456789);
     account.setBalance(100.51);
-    account.printAccountInfo();
+    account.toString();
   }
 }
