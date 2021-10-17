@@ -19,26 +19,26 @@ public class BankAccount{
   private int accountNumber;
   private double balance;
   
-  private String setFullName(String full){
-    fullName = full;
+  public String setName(String newName){
+    fullName = newName;
     return fullName;
   }
-  private String setPassword(String pass){
-    password = pass;
+  public String setPasswd(String newPasswd){
+    password = newPasswd;
     return password;
   }
-  private int setAccountPin(int pin){
+  public short setPin(short newPin){
     //if not 4 digit, cannot be pin
-    accountPin = pin;
+    accountPin = newPin;
     return accountPin;
   }
-  private int setAccountNumber(int num){
+  public int setAcctNum(int newAcctNum){
     //if not 9-digit, cannot be acct number
-    accountNumber = num;
+    accountNumber = newAcctNum;
     return accountNumber;
   }
-  private double setBalance(double money){
-    balance = money;
+  private double setBalance(double newBalance){
+    balance = newBalance;
     return balance;
   }
   private void printAccountInfo(){
@@ -48,22 +48,21 @@ public class BankAccount{
    System.out.println("Your account number is: " + accountNumber);
    System.out.println("Your balance is: " + balance);
   }
-  private double deposit(double amount){
-   double newBalance = balance + amount;
+  public void deposit(double depositAmount){
+   double newBalance = balance + depositAmount;
    balance = newBalance;
-   return balance;
     
-  private double withdraw(double amount){
-    double newBalance = balance - amount;
+  public void withdraw(double withdrawAmount){
+    double newBalance = balance - withdrawAmount;
     balance = newBalance;
     return balance;
 
   public static void main(String[] args){
     BankAccount account = new BankAccount();
-    account.setFullName("Bob Smith");
-    account.setPassword("1234Unicorn");
-    account.setAccountPin(5678);
-    account.setAccountNumber(123456789);
+    account.setName("Bob Smith");
+    account.setPasswd("1234Unicorn");
+    account.setPin(5678);
+    account.setAcctNum(123456789);
     account.setBalance(100.51);
     account.printAccountInfo();
   }
