@@ -55,7 +55,7 @@ public class BankAccount{
   }
    
   public String toString(){
-   return = (fullName + "\n" + password + "\n" + accountNumber + "\n" + balance); //do we reference setFullName or just fullName?
+   return ("" + fullName + "\n" + password + "\n" + accountNumber + "\n" + balance); //do we reference setFullName or just fullName?
 //    return ("Your password is: " + password);
 //    return ("Your account PIN is: " + accountPin);
 //    return ("Your account number is: " + accountNumber);
