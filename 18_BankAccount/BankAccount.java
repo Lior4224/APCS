@@ -54,12 +54,12 @@ public class BankAccount{
    balance = balance - withdrawAmount;
   }
    
-  public void toString(){
-    System.out.println("Your full name is: " + fullName); //do we reference setFullName or just fullName?
-   System.out.println("Your password is: " + password);
-   System.out.println("Your account PIN is: " + accountPin);
-   System.out.println("Your account number is: " + accountNumber);
-   System.out.println("Your balance is: " + balance);
+  public String toString(){
+   return ("Your full name is: " + fullName); //do we reference setFullName or just fullName?
+   return ("Your password is: " + password);
+   return ("Your account PIN is: " + accountPin);
+   return ("Your account number is: " + accountNumber);
+   return ("Your balance is: " + balance);
   }
 
   public static void main(String[] args){
