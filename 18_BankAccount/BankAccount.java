@@ -43,13 +43,15 @@ public class BankAccount{
   }
 
   public void deposit(double depositAmount){
-   double newBalance = balance + depositAmount;
-   balance = newBalance;
+  // double newBalance = balance + depositAmount;
+  // balance = newBalance;
+   balance = balance + depositAmount;
   }
     
   public void withdraw(double withdrawAmount){
-    double newBalance = balance - withdrawAmount;
-    balance = newBalance;
+   // double newBalance = balance - withdrawAmount;
+   // balance = newBalance;
+   balance = balance - withdrawAmount;
   }
    
   public void toString(){
