@@ -66,7 +66,7 @@ public class BankAccount{
     BankAccount account = new BankAccount();
     account.setName("Bob Smith");
     account.setPasswd("1234Unicorn");
-  //  account.setPin(5678);
+    account.setPin((short) 5678);
     account.setAcctNum(123456789);
     account.setBalance(100.51);
     account.toString();
