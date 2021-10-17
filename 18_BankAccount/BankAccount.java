@@ -47,7 +47,7 @@ public class BankAccount{
   //private double deposit(double){
     
 //  private double withdraw(double){
-  BankAccount account = new BankAccount();
+  BankAccount account = new static BankAccount();
 
   public static void main(String[] args){
     account.setFullName("Bob Smith");
