@@ -47,13 +47,14 @@ public class BankAccount{
   //private double deposit(double){
     
 //  private double withdraw(double){
+  BankAccount account = new BankAccount();
 
   public void main(String[] args){
-    BankAccount.setFullName("Bob Smith");
-    BankAccount.setPassword("1234Unicorn");
-    BankAccount.setAccountPin(1234);
-    BankAccount.setAccountNumber(123456789);
-    BankAccount.setBalance(100.50);
-    BankAccount.printAccountInfo();
+    account.setFullName("Bob Smith");
+    account.setPassword("1234Unicorn");
+    account.setAccountPin(1234);
+    account.setAccountNumber(123456789);
+    account.setBalance(100.50);
+    account.printAccountInfo();
   }
 }
