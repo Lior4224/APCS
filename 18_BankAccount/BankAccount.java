@@ -59,7 +59,7 @@ public class BankAccount{
     account.setPassword("1234Unicorn");
     account.setAccountPin(1234);
     account.setAccountNumber(123456789);
-    account.setBalance(100.50);
+    account.setBalance(100.51);
     account.printAccountInfo();
   }
 }
