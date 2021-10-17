@@ -55,7 +55,6 @@ public class BankAccount{
   public void withdraw(double withdrawAmount){
     double newBalance = balance - withdrawAmount;
     balance = newBalance;
-    return balance;
 
   public static void main(String[] args){
     BankAccount account = new BankAccount();
