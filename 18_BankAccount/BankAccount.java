@@ -47,9 +47,10 @@ public class BankAccount{
   //private double deposit(double){
     
 //  private double withdraw(double){
-  BankAccount account = new static BankAccount();
+
 
   public static void main(String[] args){
+    BankAccount account = new BankAccount();
     account.setFullName("Bob Smith");
     account.setPassword("1234Unicorn");
     account.setAccountPin(1234);
