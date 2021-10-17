@@ -42,7 +42,11 @@ public class BankAccount{
     return balance;
   }
   private void printAccountInfo(){
-    System.out.println(fullName); //do we reference setFullName or just fullName?
+    System.out.println("Your full name is: " + fullName); //do we reference setFullName or just fullName?
+   System.out.println("Your password is: " + password);
+   System.out.println("Your account PIN is: " + accountPin);
+   System.out.println("Your account number is: " + accountNumber);
+   System.out.println("Your balance is: " + balance);
   }
   //private double deposit(double){
     
