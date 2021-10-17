@@ -55,11 +55,11 @@ public class BankAccount{
   }
    
   public String toString(){
-   return ("Your full name is: " + fullName); //do we reference setFullName or just fullName?
-   return ("Your password is: " + password);
-   return ("Your account PIN is: " + accountPin);
-   return ("Your account number is: " + accountNumber);
-   return ("Your balance is: " + balance);
+   return = ("" + fullName + "\n" + password + "\n" + accountNumber + "\n" + balance); //do we reference setFullName or just fullName?
+//    return ("Your password is: " + password);
+//    return ("Your account PIN is: " + accountPin);
+//    return ("Your account number is: " + accountNumber);
+//    return ("Your balance is: " + balance);
   }
 
   public static void main(String[] args){
