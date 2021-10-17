@@ -49,7 +49,7 @@ public class BankAccount{
 //  private double withdraw(double){
   BankAccount account = new BankAccount();
 
-  public void main(String[] args){
+  public static void main(String[] args){
     account.setFullName("Bob Smith");
     account.setPassword("1234Unicorn");
     account.setAccountPin(1234);
