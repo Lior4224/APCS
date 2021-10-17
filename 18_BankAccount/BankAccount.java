@@ -48,16 +48,21 @@ public class BankAccount{
    System.out.println("Your account number is: " + accountNumber);
    System.out.println("Your balance is: " + balance);
   }
-  //private double deposit(double){
+  private double deposit(double amount){
+   double newBalance = balance + amount;
+   balance = newBalance;
+   return balance;
     
-//  private double withdraw(double){
-
+  private double withdraw(double amount){
+    double newBalance = balance - amount;
+    balance = newBalance;
+    return balance;
 
   public static void main(String[] args){
     BankAccount account = new BankAccount();
     account.setFullName("Bob Smith");
     account.setPassword("1234Unicorn");
-    account.setAccountPin(1234);
+    account.setAccountPin(5678);
     account.setAccountNumber(123456789);
     account.setBalance(100.51);
     account.printAccountInfo();
