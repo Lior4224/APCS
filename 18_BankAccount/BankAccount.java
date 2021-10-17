@@ -48,7 +48,7 @@ public class BankAccount{
     
 //  private double withdraw(double){
 
-  public static void main(String[] args){
+  public void main(String[] args){
     setFullName("Bob Smith");
     setPassword("1234Unicorn");
     setAccountPin(1234);
