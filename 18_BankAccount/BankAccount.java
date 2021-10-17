@@ -15,7 +15,7 @@ Team UnicornHead’s Latest and Greatest Q3 Response:
 public class BankAccount{
   private String fullName;
   private String password;
-  private int accountPin;
+  private short accountPin;
   private int accountNumber;
   private double balance;
   
