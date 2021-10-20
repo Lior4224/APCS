@@ -66,9 +66,9 @@ public class Stats {
 
 //   //main method for testing functionality
   public static void main( String[] args ) {
-    mean((int) 1,(int) 5);
-    mean((double) 1,(double) 5);
-    mean((double) 1,(double) 4);
+    System.out.println(mean((int) 1,(int) 5));
+    System.out.println(mean((double) 1,(double) 5));
+    System.out.println(mean((double) 1,(double) 4));
 
   }
 
