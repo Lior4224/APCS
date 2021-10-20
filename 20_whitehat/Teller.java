@@ -1,7 +1,7 @@
 /*
-UnicornHead: Ariella Katz, Melody Lew, Lior Piloschouk, Tom, Ollie, Toothless
+UnicornHead: Ariella Katz, Melody Lew, Lior Polischouk, Tom, Ollie, Toothless
 APCS
-hw20 - External Audit
+HW20 - External Audit
 2021-10-19
 */
 
