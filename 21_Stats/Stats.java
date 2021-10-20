@@ -80,6 +80,7 @@ public class Stats {
 
 //   //main method for testing functionality
   public static void main( String[] args ) {
+     Stats test = new Stats();
      test.mean(2,4);
      test.mean(3,4);
      test.mean(2.0,4.0);
