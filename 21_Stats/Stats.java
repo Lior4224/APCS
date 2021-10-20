@@ -22,7 +22,7 @@ public class Stats {
   }
 
   public static int max(int a, int b) {
-    if a >= b {
+    if (a >= b) {
       return a;
       } else {
       return b;
@@ -30,7 +30,7 @@ public class Stats {
   }
 
   public static double max(double a, double b) {
-    if a >= b {
+    if (a >= b) {
       return a;
       } else {
       return b;
@@ -48,9 +48,9 @@ public class Stats {
   }
 
   public static int max(int a, int b, int c) {
-     if (a >= b) && (a >= c){
+     if ((a >= b) && (a >= c)) {
         return a;
-     } else if (b >= a) && (b >= c) {
+     } else if ((b >= a) && (b >= c)) {
         return b;
      } else {
         return c;
@@ -58,9 +58,9 @@ public class Stats {
   }
 
   public static double max(double a, double b, double c) {
-     if (a >= b) && (a >= c){
+     if ((a >= b) && (a >= c)) {
         return a;
-     } else if (b >= a) && (b >= c) {
+     } else if ((b >= a) && (b >= c)) {
         return b;
      } else {
         return c;
