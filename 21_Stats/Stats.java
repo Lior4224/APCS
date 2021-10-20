@@ -23,19 +23,19 @@ public class Stats {
 
   public static int max(int a, int b) {
     if a >= b {
-      return a
+      return a;
       }
     else {
-      return b
+      return b;
       }
   }
 
   public static double max(double a, double b) {
     if a >= b {
-      return a
+      return a;
       }
     else {
-      return b
+      return b;
       }
   }
 
