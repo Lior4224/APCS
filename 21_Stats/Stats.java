@@ -17,7 +17,7 @@ public class Stats {
   }
 
   public static double mean(double a, double b) {
-    double mean = (Math.round((a + b)/2));
+    double mean = (a + b) / 2;
     return mean;
   }
 
