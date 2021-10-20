@@ -12,12 +12,12 @@
 public class Stats {
 
   public static int mean(int a, int b) {
-    mean = (a + b) / 2;
+    int mean = (a + b) / 2;
     return mean;
   }
 
   public static double mean(double a, double b) {
-    mean = (Math.round((a + b)/2));
+    double mean = (Math.round((a + b)/2));
     return mean;
   }
 
