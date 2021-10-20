@@ -67,23 +67,30 @@ public class Stats {
      }
   }
 
-//   public static int geoMean(int a, int b, int c) {
+  public static int geoMean(int a, int b, int c) {
+     int mean = Math.pow(a*b*c, 1/3);
+     return mean;
+  }
 
-//   }
-
-//   public static double geoMean(double a, double b, double c) {
-
-//   }
+  public static double geoMean(double a, double b, double c) {
+     double mean = Math.pow(a*b*c, 1/3);
+     return mean;
+  }
 
 
 //   //main method for testing functionality
   public static void main( String[] args ) {
-     System.out.println(mean((int) 1,(int) 5));
-     System.out.println(mean((double) 1,(double) 5));
-     System.out.println(mean((double) 1,(double) 4));
-     System.out.println(max((double) 2,(double) 3));
-     System.out.println(max((int) 2,(int) 3));
-
+     test.mean(2,4);
+     test.mean(3,4);
+     test.mean(2.0,4.0);
+     test.mean(3.0,4.0);
+     test.geoMean(4,5);
+     test.geoMean(4.0,5.0);
+     test.max(2,3);
+     test.max(2.0,3.0);
+     test.geoMean(4,5,6);
+     test.geoMean(4.0,5.0,6.0);
+   
   }
 
 }//end class
