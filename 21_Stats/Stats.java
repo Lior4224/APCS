@@ -68,12 +68,12 @@ public class Stats {
   }
 
   public static int geoMean(int a, int b, int c) {
-     int mean = (int)Math.pow(a*b*c, 1/3);
+     int mean = (int)Math.pow(a*b*c, 1.0/3.0);
      return mean;
   }
 
   public static double geoMean(double a, double b, double c) {
-     double mean = Math.pow(a*b*c, 1/3);
+     double mean = Math.pow(a*b*c, 1.0/3.0);
      return mean;
   }
 
