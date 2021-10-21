@@ -1,13 +1,23 @@
-/**
-   Melody Lew, Ariella Katz, Lior Polischouk
-   APCS
-   HW20 Statistically Speaking...
-   2021-10-20
-   TASK:
-   Implement each method without typecasting.
-   xtra: harmonic mean is the reciprocal of the
-   arithmetic mean of the reciprocals
- **/
+/*
+UnicornHead: Melody Lew, Ariella Katz, Lior Polischouk, Tom, Ollie, Toothless
+APCS pd6
+HW21 -- STAtisTically Speaking...
+2021-10-20
+*/
+
+/*
+DISCO:
+0. For the geoMean methods that use Math.pow, the power has to be written as 1.0/3.0 
+   instead of 1/3, or it returns 1, because the / operator sees two int operands and 
+   returns an int, 0, and anything to the 0 power is 1.
+   Integer division rounds down towards 0, while double division gives a more precise
+   approximation.
+QCC:
+0. How can we make this compilable without using typecasting, specifically for the methods
+   involving means (arithmetic or geometric)?
+1. What is the purpose of the main() method in this class if we're using the driver class,
+   StatsDriver.java, to test the functionality of the code?
+*/
 
 public class Stats {
 
@@ -77,21 +87,7 @@ public class Stats {
      return mean;
   }
 
-
-//   //main method for testing functionality
-  public static void main( String[] args ) {
-//      Stats test = new Stats();
-//      test.mean(2,4);
-//      test.mean(3,4);
-//      test.mean(2.0,4.0);
-//      test.mean(3.0,4.0);
-//      test.geoMean(4,5);
-//      test.geoMean(4.0,5.0);
-//      test.max(2,3);
-//      test.max(2.0,3.0);
-//      test.geoMean(4,5,6);
-//      test.geoMean(4.0,5.0,6.0);
-   
+  public static void main( String[] args ) { 
   }
 
 }//end class
