@@ -1,5 +1,5 @@
 /**
-   Lior Polischouk
+   Melody Lew, Ariella Katz, Lior Polischouk
    APCS
    HW20 Statistically Speaking...
    2021-10-20
@@ -80,17 +80,17 @@ public class Stats {
 
 //   //main method for testing functionality
   public static void main( String[] args ) {
-     Stats test = new Stats();
-     test.mean(2,4);
-     test.mean(3,4);
-     test.mean(2.0,4.0);
-     test.mean(3.0,4.0);
-     test.geoMean(4,5);
-     test.geoMean(4.0,5.0);
-     test.max(2,3);
-     test.max(2.0,3.0);
-     test.geoMean(4,5,6);
-     test.geoMean(4.0,5.0,6.0);
+//      Stats test = new Stats();
+//      test.mean(2,4);
+//      test.mean(3,4);
+//      test.mean(2.0,4.0);
+//      test.mean(3.0,4.0);
+//      test.geoMean(4,5);
+//      test.geoMean(4.0,5.0);
+//      test.max(2,3);
+//      test.max(2.0,3.0);
+//      test.geoMean(4,5,6);
+//      test.geoMean(4.0,5.0,6.0);
    
   }
 
