@@ -32,8 +32,8 @@ public class Driver {
       System.out.println("wayne: " + wayne);
       //test flip() method
       System.out.println("\nAfter flipping...");
-      yours.reset(heads, 0.50);
-      wayne.reset(heads, 0.50);
+      yours.reset("heads", 0.50);
+      wayne.reset("heads", 0.50);
       yours.flip();
       wayne.flip();
       System.out.println("yours: " + yours);
