@@ -1,8 +1,17 @@
-/***
- *  class Coin
- *  by Clyde "Thluffy" Sinclair
- *  SKELETON
- ***/
+/*
+Team BLt: Brian Wang, Lior Polischouk, Dolphin, Toothless
+APCS Pd.6
+HW23 -- What Does Equality Look Like?
+2021-10-22
+
+DISCO:
+0. Bias is set to 0 by default because the "null" value of doubles are 0.
+1. We have to set either heads or tails as a default value for upFace, or else the face will just be "null" for the first two constructors.
+
+QCC:
+0. 
+
+ */
 
 public class Coin {
 
