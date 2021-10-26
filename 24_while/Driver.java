@@ -79,5 +79,19 @@ public class Driver {
  	    }
         }
     }
+    public static void zMatches () {
+      Coin jim = new Coin();
+      Coin john = new Coin();
+      int matches = 0;
+      while ((matches < 65536) && (matches <= 66165)) { 
+        //66165 is greatest number > 65536 that is multiple of 2005
+        jim.flip();
+        john.flip();
+        if ( jim.equals(john) ) {
+          matches += 1;
+        }
+
+      }
+    }
    
 }//end class
