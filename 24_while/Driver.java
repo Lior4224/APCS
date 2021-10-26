@@ -1,14 +1,18 @@
 /*
 Team BLt: Brian Wang, Lior Polischouk, Dolphin, Toothless
 APCS Pd.6
-HW23 -- What Does Equality Look Like? / Creating Coin.java with Driver.java / Making a functional coinflip code
-2021-10-22
+HW24. Get it While You Can
+2021-10-25
+Time elapsed: ~20 minutes
 DISCO:
-0. Bias is set to 0 by default because the default unassigned value is 0, making it a very unfair coin.
-1. We have to set either heads or tails as a default value for upFace, or else the face will just be "null" for the f>
-2. Math.random() is very annoying
+0. We learned that the default .equals has to have its two inputs be exactly the same
+(can't be values from different Coins), while our premade .equals method works with
+values from different Coins.
+1. 
 QCC:
-0. What if the random value equals the bias? Does the coin land on the side?
+0. Were we supposed to have the flip tests return void or return something else?
+POST-v0 MODS
+0. We changed our constructors to use reset at the start.
  */
 
 public class Driver {
@@ -59,6 +63,7 @@ public class Driver {
     */
       xHeads(999);
       yMatches(999);
+      zMatches();
   }//end main()
   
   public static void xHeads(int x) {
