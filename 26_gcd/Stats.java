@@ -94,9 +94,17 @@ public class Stats {
      return output;
    }
 
-   // public static int gcdER(int a, int b) {
-
-   // }
+   public static int gcdER(int a, int b) {
+      if (a > b) {
+         return gcdER(b, (a - b));
+      }
+      else if (a < b) {
+         return gcdER(a, (b - a));
+      }
+      else{
+         return a;
+      }
+   }
 
    public static int gcdEW(int a, int b) {
       int x;
@@ -117,10 +125,22 @@ public class Stats {
       return x;
    }
 
+   // public static int gcdEW2(int a, int b) {
+   //    int x;
+   //    if (a > b) {
+   //       x = b;
+   //    }
+   //    else {
+   //       x = a;
+   //    }
+   //    while 
+   // }
+
 
   public static void main( String[] args ) { 
      System.out.println(gcd(1072, 584));
      System.out.println(gcdEW(256, 86));
+     System.out.println(gcdER(1072,584));
   }
 
 }//end class
