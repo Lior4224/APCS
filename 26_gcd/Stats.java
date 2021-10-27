@@ -3,7 +3,7 @@ UnicornHead: Melody Lew, Ariella Katz, Lior Polischouk, Tom, Ollie, Toothless
 APCS pd6
 HW26: GCD Three Ways
 2021-10-27
-Time elapsed: 
+Time elapsed: ~30 minutes not including procrastination
 */
 
 /*
@@ -124,18 +124,6 @@ public class Stats {
       }
       return x;
    }
-
-   // public static int gcdEW2(int a, int b) {
-   //    int x;
-   //    if (a > b) {
-   //       x = b;
-   //    }
-   //    else {
-   //       x = a;
-   //    }
-   //    while 
-   // }
-
 
   public static void main( String[] args ) { 
      System.out.println(gcd(1072, 584));
