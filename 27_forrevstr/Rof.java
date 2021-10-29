@@ -3,11 +3,12 @@ Team LNN: Lior Polischouk, Nakib Abedin, Nicole Zhou
 APCS pd6
 HW27: FOR the Love of Strings
 2021-10-28
-Time elapsed: 
+Time elapsed: ~1.25 hours (got stuck on recursion)
 */
 /*
 DISCO:
-0. 
+0. s.length outputs the amount of characters in a string.
+1. s.substring(x, y) outputs the char inbetween the xth and yth index of s.
 QCC:
 0. 
 */
@@ -31,10 +32,21 @@ public class Rof {
         }
         return output;
     }
+    public static String reverseR (String s) {
+            if (s.length() == 0) {
+                return s;
+            }
+            else {
+                  System.out.print(s.substring(s.length()-1));//prints last character
+                  return reverseR(s.substring(0, s.length()-1));
+                  //reruns method with s - last character
+            }
+    }
     public static void main( String[] args ) { 
         System.out.println(fenceF(5));
         System.out.println(fenceF(0));
         System.out.println(fenceF(25));
         System.out.println(reverseF("desserts"));
+        System.out.println(reverseR("stressed"));
     }
 }

@@ -1,73 +1,57 @@
 /*
 UnicornHead: Melody Lew, Ariella Katz, Lior Polischouk, Tom, Ollie, Toothless
 APCS pd6
-HW26 -- GCD Three Ways
+HW26: GCD Three Ways
 2021-10-27
-<<<<<<< HEAD
 Time elapsed: ~1 hour
-=======
-time spent: 1,0 hrs
->>>>>>> af071b5dd604a9c94d641c6c3255859ba6eb1751
 */
 
 /*
 DISCO:
-0. Working backwards (i.e. starting from larger numbers and working your way down to smaller numbers) is faster and makes more sense
-in this context of gcd because you're finding the GREATEST common denominator.
-1. If one part of the or statement is true, then java can implement boolean short circuiting. For example, if either a or b are not 
-divisible by x, then x isn't the gcd.
+0. 
 QCC:
-0. Why does the idea that the gcd remains the same if the larger number is replaced by the difference work? How/where did this discovery
-arise?
-ALGO:
-gcdEW
- 0. If either integers are 0 or negative, then there will be no positive gcd and will result in 0 being returned.
- 1. Start off with the greatest common denominator as the smaller integer of the two.
- 2. If the smaller integer is not the gcd, then decrease it by 1 and keep dividing until you find the gcd of both integers.
+0. 
 */
-import java.lang.Math;
 
 public class Stats {
 
   public static int mean(int a, int b) {
-    int avg = (a+b)/2;
-    return avg;
+    int mean = (a + b) / 2;
+    return mean;
   }
 
   public static double mean(double a, double b) {
-    double avg = (a+b)/2;
-    return avg;
+    double mean = (a + b) / 2;
+    return mean;
   }
 
   public static int max(int a, int b) {
-    if (a >= b){
+    if (a >= b) {
       return a;
-    }
-    else {
+      } else {
       return b;
-    }
+      }
   }
 
   public static double max(double a, double b) {
-    if (a >= b){
+    if (a >= b) {
       return a;
-    }
-    else {
+      } else {
       return b;
-    }
+      }
   }
 
   public static int geoMean(int a, int b) {
-    int mean = (int)Math.sqrt(a*b);
-    return mean;
+     int mean = (int)Math.sqrt (a * b);
+     return mean;
   }
 
   public static double geoMean(double a, double b) {
-    double mean = Math.sqrt(a*b);
-    return mean;
+     double mean = Math.sqrt (a * b);
+     return mean;
   }
 
-public static int max(int a, int b, int c) {
+  public static int max(int a, int b, int c) {
      if ((a >= b) && (a >= c)) {
         return a;
      } else if ((b >= a) && (b >= c)) {
@@ -93,11 +77,10 @@ public static int max(int a, int b, int c) {
   }
 
   public static double geoMean(double a, double b, double c) {
-     double mean = Math.pow(a*b*c,1.0/3.0);
+     double mean = Math.pow(a*b*c, 1.0/3.0);
      return mean;
   }
   
-<<<<<<< HEAD
   public static int gcd(int a, int b) {
    if (a <= 0 || b <= 0) {
       System.out.print("Error: Non-positive input(s) -> ");
@@ -128,38 +111,9 @@ public static int max(int a, int b, int c) {
       }
       else{
          return a;
-=======
-//GCD
-  
-public static int gcd(int a, int b) {
-    if (a == 0) { return b; }
-    if (b == 0) { return a; }
-    if ((a < 0 || b < 0) || (b == 0 && a == 0)) {
-      System.out.print("Error: Invalid input(s) -> ");
-      return 0;
-    }
-
-    int n = 1;
-    int output = 0;
-    while (n <= a && n <= b) {
-      if (a % n == 0 && b % n == 0) { 
-        output = n;
->>>>>>> af071b5dd604a9c94d641c6c3255859ba6eb1751
       }
-      n += 1;
-    }
-    return output;
-  }
+   }
 
-  public static int gcdER(int a, int b) {
-    if (a == 0) { return b; }
-    if (b == 0) { return a; }
-    if ((a < 0 || b < 0) || (b == 0 && a == 0)) {
-      System.out.print("Error: Invalid input(s) -> ");
-      return 0;
-    }
-
-<<<<<<< HEAD
    public static int gcdEW(int a, int b) {
       if (a <= 0 || b <= 0) {
          System.out.print("Error: Non-positive input(s) -> ");
@@ -168,46 +122,22 @@ public static int gcd(int a, int b) {
       int x;
       if (a > b) {
          x = b;
-=======
-    if (a == b) { 
-      return a;
-    }
-    else {
-      if (a < b) {
-        b = b - a;
-        return gcdER(a, b);
->>>>>>> af071b5dd604a9c94d641c6c3255859ba6eb1751
       }
       else {
-        a = a - b;
-        return gcdER(a, b);
+         x = a;
       }
-    }
-  }
-
-  public static int gcdEW(int a, int b) {
-    if (a == 0) { return b; }
-    if (b == 0) { return a; }
-    if ((a < 0 || b < 0) || (b == 0 && a == 0)) {
-      System.out.print("Error: Invalid input(s) -> ");
-      return 0;
-    }
-
-    int n = 0;
-    if (a < b) { 
-      n = a;
-    }
-    else { 
-      n = b;
-    }
-    while (a % n != 0 || b % n != 0) { 
-      n -= 1;
-    }
-    return n;
-  }
+      while (x >= 1) {
+         if (a % x != 0 || b % x != 0) {
+            x -= 1;
+         }
+         else {
+            return x;
+         }
+      }
+      return x;
+   }
 
   public static void main( String[] args ) { 
-<<<<<<< HEAD
    System.out.println(gcd(15,18));
    System.out.println(gcd(3,3));
    System.out.println(gcd(0,5));
@@ -217,14 +147,6 @@ public static int gcd(int a, int b) {
    System.out.println(gcdEW(15,18));
    System.out.println(gcdEW(3,3));
    System.out.println(gcdEW(0,5));
-=======
-     System.out.println(gcd(6, 8));
-     System.out.println(gcdEW(6, 8));
-     System.out.println(gcdER(6, 8));
-     System.out.println(gcd(1072, 584));
-     System.out.println(gcdEW(256, 86));
-     System.out.println(gcdER(1072,584));
->>>>>>> af071b5dd604a9c94d641c6c3255859ba6eb1751
   }
 
 }//end class
