@@ -3,7 +3,7 @@ UnicornHead: Melody Lew, Ariella Katz, Lior Polischouk, Tom, Ollie, Toothless
 APCS pd6
 HW26: GCD Three Ways
 2021-10-27
-Time elapsed: ~30 minutes not including procrastination
+Time elapsed: ~1 hour
 */
 
 /*
@@ -82,6 +82,10 @@ public class Stats {
   }
   
   public static int gcd(int a, int b) {
+   if (a <= 0 || b <= 0) {
+      System.out.print("Error: Non-positive input(s) -> ");
+      return 0;
+   }
      int x = 1; //starts from 1 and increases by 1 repeatedly
      int output = 1; //stores gcd
 
@@ -95,6 +99,10 @@ public class Stats {
    }
 
    public static int gcdER(int a, int b) {
+      if (a <= 0 || b <= 0) {
+         System.out.print("Error: Non-positive input(s) -> ");
+         return 0;
+       }
       if (a > b) {
          return gcdER(b, (a - b));
       }
@@ -107,6 +115,10 @@ public class Stats {
    }
 
    public static int gcdEW(int a, int b) {
+      if (a <= 0 || b <= 0) {
+         System.out.print("Error: Non-positive input(s) -> ");
+         return 0;
+       }
       int x;
       if (a > b) {
          x = b;
@@ -126,9 +138,15 @@ public class Stats {
    }
 
   public static void main( String[] args ) { 
-     System.out.println(gcd(1072, 584));
-     System.out.println(gcdEW(256, 86));
-     System.out.println(gcdER(1072,584));
+   System.out.println(gcd(15,18));
+   System.out.println(gcd(3,3));
+   System.out.println(gcd(0,5));
+   System.out.println(gcdER(15,18));
+   System.out.println(gcdER(3,3));
+   System.out.println(gcdER(0,5));
+   System.out.println(gcdEW(15,18));
+   System.out.println(gcdEW(3,3));
+   System.out.println(gcdEW(0,5));
   }
 
 }//end class
