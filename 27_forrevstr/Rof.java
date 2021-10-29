@@ -3,14 +3,18 @@ Team LNN: Lior Polischouk, Nakib Abedin, Nicole Zhou
 APCS pd6
 HW27: FOR the Love of Strings
 2021-10-28
-Time elapsed: ~1.25 hours (got stuck on recursion)
+Time elapsed: ~1.3 hours (got stuck on recursion)
 */
 /*
 DISCO:
 0. s.length outputs the amount of characters in a string.
 1. s.substring(x, y) outputs the char inbetween the xth and yth index of s.
+2. The substring() method will assume that you want it to go to the last index 
+   if you do not have a second argument.
+3. For recursive functions, you need to avoid initializing variables because 
+   those variables will get reset when you make a function call inside of the function.
 QCC:
-0. 
+0. What is the best way to design a recursive algorithm? 
 */
 
 public class Rof {
