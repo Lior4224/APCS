@@ -1,11 +1,10 @@
 /*
-UnicornHead: Melody Lew, Ariella Katz, Lior Polischouk, Tom, Ollie, Toothless
+Team LNN: Lior Polischouk, Nakib Abedin, Nicole Zhou
 APCS pd6
-HW26: GCD Three Ways
-2021-10-27
-Time elapsed: ~1 hour
+HW27: FOR the Love of Strings
+2021-10-28
+Time elapsed: 
 */
-
 /*
 DISCO:
 0. 
