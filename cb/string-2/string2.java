@@ -1,5 +1,5 @@
-public class string2[
-	public String doubleChar(String str) {
+public class string2{
+	public static String doubleChar(String str) { 
   		String output = "";
   		for (int i = 0; i < str.length(); i++) {
     			output += str.substring(i,i+1);
@@ -7,7 +7,7 @@ public class string2[
   		}
   		return output;
 	}
-	public int countHi(String str) {
+	public static int countHi(String str) {
   		int output = 0;
   		for (int i = 0; i < str.length()-1; i++) {
     			if ((str.substring(i, i+2)).equals ("hi")) {
@@ -16,7 +16,7 @@ public class string2[
   		}
   		return output;
 	}
-	public boolean catDog(String str) {
+	public static boolean catDog(String str) {
   		int output1 = 0;
   		int output2 = 0;
   		for (int i = 0; i < str.length()-2; i++) {
@@ -31,6 +31,103 @@ public class string2[
   		}
   		return (output1 == output2);
 	}
+	public static int countCode(String str) {
+		int output = 0;
+		for (int i = 0; i < str.length()-3; i++) {
+		  if ((str.substring(i, i+2)).equals ("co") && (str.substring(i+3, i+4)).equals ("e")) {
+			output += 1;
+		  }
+		}
+		return output;
+	  }
+	  public static boolean endOther(String a, String b) {
+		a = a.toLowerCase();
+		b = b.toLowerCase();
+		if (a.length() > b.length()) {
+		  return(a.substring(a.length()-b.length(), a.length()).equals (b)); 
+		}
+		  else {
+			return (b.substring(b.length()-a.length(), b.length()).equals (a)); 
+		}
+	  }
+	  public static boolean xyzThere(String str) {
+        // boolean output = true;
+                    //ATTEMPT 1: all are correct except xyz.abc and other tests
+    //     if (str.length() <= 3) {
+    //         for (int i = 0; i < str.length()-3; i++) {
+
+    //             if ((str.substring(i+1, i+4)).equals ("xyz")) {
+    //                 if (i == 0 || (str.substring(i, i+1)).equals (".")) {
+    //                     output = false;
+    //                 }
+    //                 else {
+    //                     output = true;
+    //                 }
+    //             }
+    //             else {
+    //                 output = false;
+    //             }
+    //         }
+    //     }
+    //     else {
+    //         output = false;
+    //     }
+    //     return output;
+    // }
+                //ATTEMPT 2: all are correct except abcxy
+    // if (str.length() >= 3) {
+    //     for (int i = 0; i < str.length()-2; i++) {
+          
+    //       if ((str.substring(i, i+3)).equals ("xyz")) {
+    //         if (i == 0 || !(str.substring(i-1, i)).equals (".")) {
+    //          output = true;
+    //        }
+    //        else {
+    //           output = false;
+    //        }
+    //       }
+    //     //   else {
+    //     //   output = false;
+    //     // }
+    //     }
+    //   }
+    //   else {
+    //     output = false;
+    //   }
+    //   return output;
+    // }
+                //ATTEMPT 3: searched up on internet, works for all cases but uses str.charAt
+        for(int i=0; i < str.length()-2; i++) {
+          if(str.substring(i,i+3).equals("xyz")) {
+            if(i==0) {
+            return true;
+            }
+            else if(str.charAt(i-1) != '.') {
+              return true;
+            }
+          }
+        }
+        return false;
+      }
+
+	public static void main(String[] args) {
+		System.out.println(doubleChar("Hello"));
+		System.out.println(countHi ("abchi hi h hi"));
+		System.out.println(catDog ("1cat1cadodog"));
+		System.out.println(countCode("copecodecadecolecode"));
+		System.out.println(endOther("Hiabc", "abc"));
+		System.out.println(endOther("AbC", "HiaBc"));
+		System.out.println(endOther("abc", "abXabc"));
+		System.out.println(xyzThere("abc.xyz"));
+		System.out.println(xyzThere("xyz.abc"));
+	}
+
+}
 
 
 
+/* 
+String a = hi, hello
+String b = hello
+	If substring ((a-b), a-1 equals b OR
+       substring ((b-a)), b-1 equals a */
