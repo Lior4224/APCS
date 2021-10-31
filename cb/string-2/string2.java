@@ -165,6 +165,16 @@ public class string2{
   		}
   		return output;
 	}
+	public static String repeatSeparator(String word, String sep, int count) {
+  		String output = "";
+  		for (int i = 0; i < count; i++) {
+    			output += word;
+    			if (i != count-1) {
+      				output += sep;
+    			}
+  		}
+  		return output;
+	}
 
 
 	public static void main(String[] args) {
@@ -182,6 +192,7 @@ public class string2{
 		System.out.println(mixString("abc", "xyz"));
 		System.out.println(repeatEnd("Hello", 3));
 		System.out.println(repeatFront("Chocolate", 4));
+		System.out.println(repeatSeparator("Word", "X", 3));
 	}
 
 }
