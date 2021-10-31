@@ -151,6 +151,13 @@ public class string2{
   		output += y.substring(x.length(), y.length());
   		return output;
 	}
+	public static String repeatEnd(String str, int n) {
+  		String output = "";
+  		for (int i = 0; i < n; i++) {
+    			output += str.substring(str.length()-n, str.length());
+  		}
+  		return output;
+	}
 
 
 	public static void main(String[] args) {
@@ -166,6 +173,7 @@ public class string2{
 		System.out.println(bobThere("abcbob"));
 		System.out.println(xyBalance("aaxbby"));
 		System.out.println(mixString("abc", "xyz"));
+		System.out.println(repeatEnd("Hello", 3));
 	}
 
 }
