@@ -23,9 +23,7 @@ public class string2{
     			if ((str.substring(i, i+3)).equals ("cat")) {
      				 output1 += 1;
     			}
-  		}
-  		for (int j = 0; j < str.length()-2; j++) {
-    			if ((str.substring(j, j+3)).equals ("dog")) {
+			if ((str.substring(i, i+3)).equals ("dog")) {
      				 output2 += 1;
     			}
   		}
@@ -109,6 +107,15 @@ public class string2{
         }
         return false;
       }
+	public static boolean bobThere(String str) {
+  		for (int i = 0; i < str.length()-2; i++) {
+    			if (str.substring(i, i+1).equals ("b") && str.substring(i+2, i+3).equals ("b")) {
+      				return true;
+    			}
+  		}
+  		return false;
+	}
+
 
 	public static void main(String[] args) {
 		System.out.println(doubleChar("Hello"));
@@ -120,6 +127,7 @@ public class string2{
 		System.out.println(endOther("abc", "abXabc"));
 		System.out.println(xyzThere("abc.xyz"));
 		System.out.println(xyzThere("xyz.abc"));
+		System.out.println(bobThere("abcbob"));
 	}
 
 }
