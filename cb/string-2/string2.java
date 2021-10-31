@@ -158,6 +158,13 @@ public class string2{
   		}
   		return output;
 	}
+	public static String repeatFront(String str, int n) {
+  		String output = "";
+  		for (int i = n; i > 0; i--) {
+    			output += str.substring(0, i);
+  		}
+  		return output;
+	}
 
 
 	public static void main(String[] args) {
@@ -174,6 +181,7 @@ public class string2{
 		System.out.println(xyBalance("aaxbby"));
 		System.out.println(mixString("abc", "xyz"));
 		System.out.println(repeatEnd("Hello", 3));
+		System.out.println(repeatFront("Chocolate", 4));
 	}
 
 }
