@@ -175,6 +175,15 @@ public class string2{
   		}
   		return output;
 	}
+	public static boolean prefixAgain(String str, int n) {
+  		String x = str.substring(0, n);
+  		for (int i = n; i <= str.length()-n; i++) {
+    			if (str.substring(i, i+n).equals (x)) {
+      				return true;
+    			}
+  		}
+  		return false;
+	}
 
 
 	public static void main(String[] args) {
@@ -193,6 +202,7 @@ public class string2{
 		System.out.println(repeatEnd("Hello", 3));
 		System.out.println(repeatFront("Chocolate", 4));
 		System.out.println(repeatSeparator("Word", "X", 3));
+		System.out.println(prefixAgain("abXYabc", 1));
 	}
 
 }
