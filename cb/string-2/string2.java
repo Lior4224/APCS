@@ -115,7 +115,23 @@ public class string2{
   		}
   		return false;
 	}
-
+	public static boolean xyBalance(String str) {
+  		int z = 0;
+  		for (int i = str.length(); i > 0; i--) {
+    			if (str.substring(i-1, i).equals ("y")) {
+      				z += 1;
+      				return true;
+    			}
+    			else if (str.substring(i-1, i).equals ("x")) {
+      				z += 1;
+      				return false;
+    			}     
+  		}
+  		if (z == 0) {
+    			return true;
+  		}
+  		return false;
+	}
 
 	public static void main(String[] args) {
 		System.out.println(doubleChar("Hello"));
@@ -128,6 +144,7 @@ public class string2{
 		System.out.println(xyzThere("abc.xyz"));
 		System.out.println(xyzThere("xyz.abc"));
 		System.out.println(bobThere("abcbob"));
+		System.out.println(xyBalance("aaxbby"));
 	}
 
 }
