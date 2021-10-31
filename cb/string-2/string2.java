@@ -132,6 +132,26 @@ public class string2{
   		}
   		return false;
 	}
+	public static String mixString(String a, String b) {
+  		String x = "";
+  		String y = "";
+  		String output = "";
+  		if (a.length() > b.length()) {
+    			x = b;
+    			y = a;
+  		}
+  		else {
+    			x = a;
+    			y = b;
+  		}
+  		for (int i = 0; i < x.length(); i++) {
+    			output += a.substring(i, i+1);
+    			output += b.substring(i, i+1);
+  		}
+  		output += y.substring(x.length(), y.length());
+  		return output;
+	}
+
 
 	public static void main(String[] args) {
 		System.out.println(doubleChar("Hello"));
@@ -145,6 +165,7 @@ public class string2{
 		System.out.println(xyzThere("xyz.abc"));
 		System.out.println(bobThere("abcbob"));
 		System.out.println(xyBalance("aaxbby"));
+		System.out.println(mixString("abc", "xyz"));
 	}
 
 }
