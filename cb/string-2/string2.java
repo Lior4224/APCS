@@ -107,6 +107,8 @@ public class string2{
         }
         return false;
       }
+
+	  //EXTRA PROBLEMS
 	public static boolean bobThere(String str) {
   		for (int i = 0; i < str.length()-2; i++) {
     			if (str.substring(i, i+1).equals ("b") && str.substring(i+2, i+3).equals ("b")) {
@@ -185,6 +187,63 @@ public class string2{
   		return false;
 	}
 
+	//xyzMiddle
+
+	//getSandwich
+
+	public static boolean sameStarChar(String str) {
+		boolean output = false;
+		int x = 0;
+		int y = 0;
+		for (int i = 0; i < str.length()-2; i++) {
+		  if (str.substring(i, i+1).equals (str.substring(i+2, i+3)) 
+		  && str.substring(i+1, i+2).equals ("*")) {
+			output = true;
+		  }
+		  else if (!str.substring(i, i+1).equals (str.substring(i+2, i+3)) 
+		  && str.substring(i+1, i+2).equals ("*")) {
+			return false;
+		  }
+		  else if (!str.substring(i, i+1).equals ("*")) {
+			x += 1;
+		  }
+		  else if (str.substring(i, i+1).equals ("*")) {
+			y += 1;
+		  }
+		}
+		if (x == str.length() || y == 0 || y == str.length()) {
+		  output = true;
+		}
+		return output;
+	}
+	public static String oneTwo(String str) {
+		String output = "";
+		if (str.length() >= 3) {
+		  for (int i = 0; i < str.length()-2; i+=3) {
+			output += str.substring(i+1, i+3) + str.substring(i, i+1);
+		  }
+		}
+		return output;
+	}
+	public static String zipZap(String str) {
+		String output = "";
+		if (str.length() >= 3) {
+		for (int i = 0; i < str.length(); i++) {
+		  if (str.substring(i, i+1).equals ("z") && str.substring(i+2, i+3).equals ("p")) {
+			output += str.substring(i, i+1) + str.substring(i+2, i+3);
+			i += 2;
+		  }
+		  else {
+			output += str.substring(i, i+1);
+		  }
+		}
+		}
+		else {
+		  output = str;
+		}
+		return output;
+	}
+	  
 
 	public static void main(String[] args) {
 		System.out.println(doubleChar("Hello"));
@@ -203,6 +262,11 @@ public class string2{
 		System.out.println(repeatFront("Chocolate", 4));
 		System.out.println(repeatSeparator("Word", "X", 3));
 		System.out.println(prefixAgain("abXYabc", 1));
+		//xyzMiddle
+		//getSandwich
+		System.out.println(sameStarChar("xy*yzz"));
+		System.out.println(oneTwo("abc"));
+		System.out.println(zipZap("zipXzap"));
 	}
 
 }
