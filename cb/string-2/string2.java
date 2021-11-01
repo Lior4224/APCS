@@ -94,13 +94,13 @@ public class string2{
     //   }
     //   return output;
     // }
-                //ATTEMPT 3: searched up on internet, works for all cases but uses str.charAt
+                //ATTEMPT 3: had some help from internet, works for all cases 
         for(int i=0; i < str.length()-2; i++) {
           if(str.substring(i,i+3).equals("xyz")) {
             if(i==0) {
             return true;
             }
-            else if(str.charAt(i-1) != '.') {
+            else if(!(str.substring(i-1, i).equals ("."))) {
               return true;
             }
           }
