@@ -8,6 +8,7 @@
  * DISCO
  * - Scanner.next() checks for the next word in the input.
  * - Scanner.nextLine() returns the entire input.
+ * - Using recursion for our pig latin converter was the most efficient/easiest way that we found.
  *
  * QCC
  * - What is the most efficient loop that goes through every word in the input that we give Scanner?
