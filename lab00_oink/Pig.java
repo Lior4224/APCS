@@ -1,9 +1,16 @@
 /***
- * Clyde "Thluffy" Sinclair
+ * Aliens - Weichen Liu + Blueface, Brian Li + Robert, Lior Polischouk + Toothless)
  * APCS
- * HW31 -- deploying linear search on Strings, using helper methods
- * 2021-11-04r
- * time spent: .5hrs
+ * Lab v0 -- Pig Latin Work
+ * 2021-11-08
+ * time spent: 0.9 hrs
+ *
+ * DISCO
+ * - Scanner.next() checks for the next word in the input.
+ * - Scanner.nextLine() returns the entire input.
+ *
+ * QCC
+ * - What is the most efficient loop that goes through every word in the input that we give Scanner?
  *
  * class Pig
  * a Pig Latin translator
@@ -44,9 +51,7 @@ public class Pig {
 
     /* equiv code, wo using indexOf()...
        boolean ans = false;
-
        for( int i = 0; i < w.length(); i++ ) {
-
        if ( w.substring(i,i+1).equals(letter) ) {
        ans = true;
        //Q: is there a more efficient way?
@@ -79,7 +84,6 @@ public class Pig {
        int numVowels = 0; //init vowels counter var
        //must touch each letter in word, so use FOR
        for( int i = 0; i < w.length(); i++ ) {
-
        if ( isAVowel( w.substring(i,i+1) ) )
        numVowels++;
        }
@@ -216,14 +220,14 @@ public class Pig {
         ans = w + "way";
 
       else {
-        int vPos = w.indexOf( firstVowel(w.substring(1)) );
+        int vPos = w.indexOf( firstVowel(w.substring(1)) ); // finds first vowel, skips over y if y is the first character
         ans = w.substring(vPos) + w.substring(0,vPos) + "ay";
       }
 
       return ans;
     }
 
-    public static String newEngtoPig( String w) {
+    public static String newEngToPig( String w) {
     String end = "";
     String ans = "";
 
@@ -245,10 +249,10 @@ public class Pig {
     public static String pigifyScan(String input){
       String reduction = input;
       if (!(hasA(reduction, " "))){ // base case, checks if it is only one word
-        return newEngtoPig(reduction);
+        return newEngToPig(reduction);
       }
       else{ // recursive reduction
-        return newEngtoPig(reduction.substring(0, reduction.indexOf(" "))) + " " + pigifyScan(reduction.substring(reduction.indexOf(" ") + 1));
+        return newEngToPig(reduction.substring(0, reduction.indexOf(" "))) + " " + pigifyScan(reduction.substring(reduction.indexOf(" ") + 1));
       }
     }
 
@@ -258,6 +262,17 @@ public class Pig {
       System.out.println("Please give an input in English that you want to translate to Pig Latin.");
       input = scan.nextLine();
       System.out.println(pigifyScan(input));
+
+      // input = scan.next();
+      // System.out.println("Output: " + newEngToPig(input));
+      // input = scan.next();
+      //
+      // while ( !(scan.next()).equals("") ){
+      //   System.out.print(" " + newEngToPig(input));
+      //   input = scan.next();
+      // }
+      //
+      // System.out.println();
 
       //
       // for( String word : args ) {
