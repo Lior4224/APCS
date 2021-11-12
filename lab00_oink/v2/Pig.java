@@ -1,21 +1,26 @@
 /***
  * Aliens - Weichen Liu + Blueface, Brian Li + Robert, Lior Polischouk + Toothless)
  * APCS
- * Lab v0 -- Pig Latin Work
- * 2021-11-08
- * time spent: 0.9 hrs
+ * Lab v2 -- Pig Latin Work
+ * 2021-11-09
+ * time spent: 1.5 hrs
  *
  * DISCO
  * - Scanner.next() checks for the next word in the input.
  * - Scanner.nextLine() returns the entire input.
- * - Using recursion for our pig latin converter was the most efficient/easiest way that we found.
  *
  * QCC
  * - What is the most efficient loop that goes through every word in the input that we give Scanner?
+ *
+ * HOW WE UTILIZED SCANNER DEMO (v2)
+ * - We used the while loop with the .hasNext(), but instead of using .next(), we used .nextLine() to check the entirety of the input on the line. We did this to consider inputs that have more than one word.
+ *
+ * WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
+ * - The scanner runs .next() twice on an input that only has one word on one line.
  * 
-HOW WE UTILIZED SCANNER DEMO (v<version num in which you incorporated Scanner functionality>)
-WHAT CAUSES THE RUNTIME ERROR IN THE SCANNER DEMO
-NEW IN v<this version>
+ * NEW IN v2
+ * - actual implementation of ScannerDemo
+ *
  * class Pig
  * a Pig Latin translator
  * ~~~~~~~~~~~~~~~~~~~ SKELETON ~~~~~~~~~~~~~~~~~~~
@@ -55,7 +60,9 @@ public class Pig {
 
     /* equiv code, wo using indexOf()...
        boolean ans = false;
+
        for( int i = 0; i < w.length(); i++ ) {
+
        if ( w.substring(i,i+1).equals(letter) ) {
        ans = true;
        //Q: is there a more efficient way?
@@ -88,6 +95,7 @@ public class Pig {
        int numVowels = 0; //init vowels counter var
        //must touch each letter in word, so use FOR
        for( int i = 0; i < w.length(); i++ ) {
+
        if ( isAVowel( w.substring(i,i+1) ) )
        numVowels++;
        }
