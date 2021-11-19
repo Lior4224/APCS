@@ -1,0 +1,33 @@
+Compile-Time Errors
+  Error with the syntax
+    Ex. Missing semicolon
+  Fix one error at a time starting with first one
+  Check for:
+    Properly nested parentheses and brackets
+    Uppercase vs lowercase
+    Semicolons
+    Quotation marks(double for strings, single for characters)
+    Matching types on left and right for each assignment statement
+    Right order and type for each method invocation
+    Right type object for instance method invocation
+Run-Time Errors
+  Error while program is running
+    Ex. Infinite recursion loop → StackOverflowError
+  Infinite loop → add print statement with values of variables and value of condition
+  Infinite recursion → check for base case, add print statement with parameters at beginning of method 
+  If not sure of flow of execution, add print statements to beginning of each method
+-Exceptions
+    NullPointerException - trying to access a variable/invoke a method on an object that is null
+    ArrayIndexOutOfBoundsException - self explanatory, add print statements to show value of index / length of array
+    StackOverflowError - infinite recursion
+    FileNotFoundException - self explanatory
+    ArithmeticException - ex. division by zero
+Logic Errors
+  Errors causing the program to do the wrong thing.
+    Ex. Expression not evaluated in expected order
+  Check if something is/isn’t happening that isn’t/is supposed to
+  Check for:
+    Int division rounds toward zero
+    Floating point numbers are not perfectly accurate
+    == checks if objects are identical, .equals checks equivalence
+  Split up complex expressions into a series of assignments to temporary variables
