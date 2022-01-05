@@ -8,18 +8,22 @@
  * class InsertionSort -- implements InsertionSort algorithm
  *
  * ALGO:
+ * Partition list into sorted and unsorted regions.
+ * "Walk" an element from unsorted region up to its place in sorted region.
+ * Increase size of sorted partition by 1.
+ * Repeat steps 2 and 3 until sorted.
  *
  * DISCO
  *
  * QCC
  * q0: How many passes to sort n elements?
- * a0:
+ * a0: n-1 passes are required.
  * q1: What do you know after pass p?
- * a1:
+ * a1: The first p elements are sorted.
  * q2: How will you know when sorted?
- * a2:
+ * a2: The element following each element is greater than the current elements.
  * q3: What constitues a pass?
- * a3:
+ * a3: The next lowest extreme value is in its sorted index.
  * q4: What must you track?
  * a4:
  ******************************/
