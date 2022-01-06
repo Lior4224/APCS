@@ -1,8 +1,13 @@
 /*****************************************************
+
 NAME (Lior + Toothless, Jacob + , Jeffery + )
+
 APCS pd6
-Lab04 -
+
+Lab04 -sort-o_NAME
+
 2022-01-06
+
 time spent:  0.5 hours
 
 Bubble:
