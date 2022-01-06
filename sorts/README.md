@@ -9,13 +9,14 @@ Bubble:
 * Best case: Array is already sorted least to greatest
 * Worst case: Array is in backwards order (greatest to least)
 
+Selection:
+* Best case: any case
+* Worst case: any case
+
 Insertion:
 * Best case: Array is already sorted least to greatest
 * Worst case: Array is in backwards order (greatest to least)
 
-Selection:
-* Best case: Array is already sorted least to greatest
-* Worst case:
 
 
  *****************************************************/
