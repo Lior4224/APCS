@@ -1,8 +1,8 @@
-// Jeffery Tang
+// Lior Polischouk
 // APCS pd6
 // HW52 -- implementing selection sort
-// 2022-01-05w
-// time spent:  hrs
+// 2022-01-04
+// time spent: 0.5 hrs
 
 /******************************
  *   class SelectionSort -- implements SelectionSort algorithm
@@ -62,22 +62,21 @@ public class SelectionSort
   // postcondition: data's elements sorted in ascending order
   public static void selectionSortV( ArrayList<Comparable> data )
   {
-    //note: this version places greatest value at "rightmost" end
+    //note: this version places greatest value at rightmost end,
 
     //maxPos will point to position of SELECTION (greatest value)
-    int maxPos = data.length;
-    for( int x = 0 ; x < maxPos-1 ; x++) {
+    int maxPos;
+
+    for( int pass = data.size()-1; pass > 0; pass-- ) {
       System.out.println( "\nbegin pass " + (data.size()-pass) );//diag
-
-
-      for(  ) {
+      maxPos = 0;
+      for( int i = 1; i <= pass; i++ ) {
         System.out.println( "maxPos: " + maxPos );//diag
         System.out.println( data );//diag
-
-
+        if ( data.get(i).compareTo( data.get(maxPos) ) > 0 )
+          maxPos = i;
       }
-
-
+      data.set( maxPos, ( data.set( pass, data.get(maxPos) ) ) );
       System.out.println( "after swap: " +  data );//diag
     }
   }//end selectionSort
@@ -105,7 +104,7 @@ public class SelectionSort
   public static void main( String [] args )
   {
 
-    /*===============for VOID methods=============
+
     ArrayList glen = new ArrayList<Integer>();
     glen.add(7);
     glen.add(1);
@@ -120,6 +119,7 @@ public class SelectionSort
     System.out.println( "ArrayList coco before sorting:\n" + coco );
     selectionSortV(coco);
     System.out.println( "ArrayList coco after sorting:\n" + coco );
+      /*===============for VOID methods=============
       ============================================*/
 
     /*==========for AL-returning methods==========
