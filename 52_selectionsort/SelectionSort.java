@@ -1,8 +1,8 @@
-// Jeffery Tang
+// Lior Polischouk
 // APCS pd6
 // HW52 -- implementing selection sort
-// 2022-01-05w
-// time spent:  hrs
+// 2022-01-04
+// time spent: 0.5 hrs
 
 /******************************
  *   class SelectionSort -- implements SelectionSort algorithm
