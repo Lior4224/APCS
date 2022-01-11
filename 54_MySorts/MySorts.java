@@ -1,3 +1,10 @@
+/*
+Lior Polischouk + Toothless
+APCS pd6
+HW54 -- One File to Bring Them All...(MySorts)
+2022-01-11
+time spent: <0.5 hrs
+*/
 import java.util.*;
 
 public class MySorts{
