@@ -1,0 +1,37 @@
+NAME (Lior + Toothless, Jacob + , Jeffery + Mathias)
+APCS pd6
+Lab04 -sort-o_NAME
+2022-01-06
+time spent: 0.5 hours
+
+DISCO:
+-
+QCC:
+-
+BUB-QA:
+ * q0: If a pass requires no swaps, what do you know?
+ * a0: The previous element is less than or equal to the following element.
+ * q1: After pass p, what do you know?
+ * a1: The first p elements are sorted
+ * q2: How many passes are necessary to completely sort?
+ * a2: The number of passes necessary is equal to one less than the number of elements in an array.
+SEL-QA:
+ * q0: How many passes to sort n elements?
+ * a0: n-1
+ * q1: What do you know after pass p?
+ * a1: The first p elements are sorted
+ * q2: How do you know if sorted?
+ * a2: The element following each element is greater than or equal to that element.
+ * q3: What does a pass boil down to?
+ * a3: Finding the least available element and putting it at the least available index
+INS-QA:
+ * q0: How many passes to sort n elements?
+ * a0: n-1
+ * q1: What do you know after pass p?
+ * a1: The first p+1 elements are sorted
+ * q2: How will you know when sorted?
+ * a2: When n-1 passes have been completed
+ * q3: What constitutes a pass?
+ * a3: Taking an element from outside of the partition and sorting it amongst the elements within the partitioned area.
+ * q4: What must you track?
+ * a4: The position of the element as it traverses the partitioned section
