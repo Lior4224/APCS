@@ -1,8 +1,12 @@
+import java.util.*;
+
 public class Sorts{
   public static void bubble( ArrayList<Comparable> data )
   {
+      int swapCount = 0;
       if (data.size() <= 1) {
-          return;
+        System.out.println(swapCount);
+        return;
       }
       else {
           for (int i = 0; i < data.size() - 1; i++) {
@@ -11,9 +15,11 @@ public class Sorts{
                       Comparable temp = data.get(j);
                       data.set(j, data.get(j-1));
                       data.set(j-1, temp);
+                      swapCount++;
                   }
               }
           }
+          System.out.println(swapCount);
           return;
       }
   }
@@ -23,7 +29,7 @@ public class Sorts{
     //note: this version places greatest value at "rightmost" end
 
     //maxPos will point to position of SELECTION (greatest value)
-
+    int swapCount = 0;
     for( int pass = 1; pass<=data.size();pass++ ) {
       int maxPos=0;
       for(int idx = 0;idx<=data.size()-pass;idx++) {
@@ -31,14 +37,17 @@ public class Sorts{
           maxPos = idx;
         }
       }
+      swapCount++;
       Comparable temp = data.get(maxPos);
       data.set(maxPos,data.get(data.size()-pass));
       data.set(data.size()-pass,temp);
     }
+    System.out.println(swapCount);
   }//end selectionSort
 
   public static void insertion( ArrayList<Comparable> data )
   {
+    int swapCount = 0;
     for( int partition = 1 ; partition < data.size() ; partition++ ) {
       //partition marks first item in unsorted region
       //traverse sorted region from right to left
@@ -50,10 +59,12 @@ public class Sorts{
           Comparable temp = data.get(index);
           data.set(index, data.get(index +1));
           data.set(index +1, temp);
+          swapCount++;
         }
         else
           break;
       }
     }
+    System.out.println(swapCount);
   }//end insertionSortV
 }
