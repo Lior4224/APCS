@@ -1,0 +1,16 @@
+Team RKL (Kosta D, Ruby F, Lior P)
+APCS pd07
+HW60 - Ask Thinkeren Notes
+2022-02-08r
+time spent: 0.5 hrs
+
+DISCO
+-Process is very inefficient when all thinkers are talking at the same time
+-Process is faster when thinkers split their decks in two and share with other thinkers
+
+QCC
+-
+
+THINKER FIRMWARE (Instructions each turtle follows)
+1. If thinker's cards > 1, split in two and give to two other thinkers
+2. 
