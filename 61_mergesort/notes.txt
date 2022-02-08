@@ -1,0 +1,45 @@
+Team RKL (Kosta D, Ruby F, Lior P)
+APCS pd07
+HW60 - Ask Thinkeren Notes
+2022-02-08r
+time spent: 0.5 hrs
+
+DISCO
+
+
+QCC
+-
+
+THINKER FIRMWARE (Instructions each turtle follows)
+1. If thinker's cards > 1, split in two and give to two other thinkers
+2.
+
+Kick-Ass Girls :: Blossom, Bubbles, Buttercup
+APCS pd0
+HW60 -- simple unit instructions -> powerful emergent behavior
+2022-02-07m
+time spent:  hrs
+
+
+DISCO
+------------------------------------------------
+* -Process is very inefficient when all thinkers are talking at the same time
+* -Process is faster when thinkers split their decks in two and share with other thinkers
+================================================
+
+
+QCC
+------------------------------------------------
+*
+================================================
+
+
+THINKER FIRMWARE
+------------------------------------------------
+*
+================================================
+
+
+useful links copied from assignments page:
+https://ccl.northwestern.edu/netlogo/models/Termites
+https://www.lifewire.com/what-is-firmware-2625881
