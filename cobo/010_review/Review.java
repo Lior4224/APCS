@@ -164,11 +164,25 @@ public class Review {
   }
 
   public static double totalSentiment  (String fileName) {
-    return sentimentVal(textToString(fileName));
+    double sentiment = 0;
+    String stringFile = textToString(fileName);
+    String[] stringFile2 = stringFile.split(" ");
+    for (String x : stringFile2) {
+      sentiment += sentimentVal(removePunctuation(x));
+    }
+
+    return sentiment;
   }
 
   public static int starRating (String fileName) {
-
+    int a = 0;
+    double b = totalSentiment(fileName);
+    if (b >= 30) {a = 5;}
+    else if (b >= 20) {a = 4;}
+    else if (b >= 10) {a = 3;}
+    else if (b >= 0) {a = 2;}
+    else {a = 1;}
+    return a;
   }
   public static void main (String[] args) {
     System.out.println(sentimentVal("happily"));
@@ -178,6 +192,8 @@ public class Review {
     System.out.println(sentimentVal("day"));
     System.out.println(sentimentVal("night"));
     System.out.println(totalSentiment("SimpleReview.txt"));
+    System.out.println(starRating("SimpleReview.txt"));
+
     //double num = sentimentVal("warm"); works
     //String word = sentimentVal(0.5); doesn't work, double can't be converted to String
     //double x = sentimentVal("good", "bad"); doesn't work, double cant be converted to String
