@@ -193,22 +193,12 @@ public class Review {
     System.out.println(sentimentVal("night"));
     System.out.println(totalSentiment("SimpleReview.txt"));
     System.out.println(starRating("SimpleReview.txt"));
+    System.out.println(starRating("test.txt"));
+    System.out.println(totalSentiment("test.txt"));
 
-    //double num = sentimentVal("warm"); works
-    //String word = sentimentVal(0.5); doesn't work, double can't be converted to String
-    //double x = sentimentVal("good", "bad"); doesn't work, double cant be converted to String
   }
 }
 
 
 
-/*
-1a: sentimentVal( String word )
-1b: This method requires a String as a parameter. If you pass a different type of parameter, there is an
-    incompatible types error (ex. int cannot be converted to String).
-1c: The method returns a value of type double.
-2a: Method call: sentimentVal("yes"), return value: 0.92
-    Method call: sentimentVal("day"), return value: 0.49
-    Method call: sentimentVal("night"), return value: -0.09
-3a:
-*/
+
