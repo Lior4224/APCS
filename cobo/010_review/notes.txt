@@ -30,4 +30,25 @@ ACTIVITY 2:
 6b: This could be fixed by possibly adding a "if(totalSentiment >= 15) {return 5;}
 
 ACTIVITY 3:
-3: 
+3: indexOf returns the index of a value in a String, while substring returns 
+    part of a String from the first specified index to the last specified index.
+    These methods can make two substrings separated at indexOf whatever value
+    they should be separated by. It is important to add 1 to the position of the 
+    space to account for the * that was added to each adjective in the review.
+5: Static methods are specific to their class, while non static methods do not 
+    belong to any class.
+6: I could remove the part that assigns random adjectives to replace each adjective.
+    Instead, I could just assign positive adjectives to replace all adjectives found.
+
+ACTIVITY 4:
+1: One may want to autogenerate a bad review if they are trying to decrease 
+    the ratings of someone/something.
+2: One may want to autogenerate a good review if they are trying to increase 
+    the ratings of someone/something.
+3: To make the method better, it could assign random pos adjectives for existing
+    pos adjectives, and vice versa with neg adjectives.
+5: This statement sets oneWord to oneWord after the first character (hello -> ello)
+6: It was necessary to remove the * because methods such as sentimentVal would think
+    the * is part of the word, which may mess up the code.
+7: This method could be modified to create a super positive review by using positive 
+    adjectives with the highest sentimentVal.
