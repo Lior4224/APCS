@@ -1,0 +1,54 @@
+Lior Polischouk
+
+ACTIVITY 1:
+
+1a: sentimentVal( String word )
+1b: This method requires a String as a parameter. If you pass a different type of parameter, there is an
+    incompatible types error (ex. int cannot be converted to String).
+1c: The method returns a value of type double.
+2a: Method call: sentimentVal("yes"), return value: 0.92
+    Method call: sentimentVal("day"), return value: 0.49
+    Method call: sentimentVal("night"), return value: -0.09
+3a: double num = sentimentVal("warm"); works
+3b: String word = sentimentVal(0.5); doesn't work, double can't be converted to String
+3c: double x = sentimentVal("good", "bad"); doesn't work, double cant be converted to String
+
+ACTIVITY 2:
+
+4: The totalSentiment method works by converting a txt file to a String, and then
+    splitting that String into multiple Strings separated by " " (so each word is a String), 
+    and putting it in an array. It then iterates through each String in the array and 
+    adds up the sentimentVal for each String and returns it.
+5a: The ratings do make sense. Files with more negative words get a 1 or 2, 
+    while files with more positive words get a 3, 4, or 5.
+5b: Right now, if there is only one positive adjective and no negative adjective,
+    the star rating would still be a 2. I could adjust my method by possibly
+    being dependent on # of positive adjectives compared to # of negative adjectives.
+    I could also maybe add a 0 rating for when there are many negative adjectives.
+6a: The student made the error of not accounting for numbers over 15, so with
+    the current code any totalSentiment over 15 would result in a starRating of 0.
+6b: This could be fixed by possibly adding a "if(totalSentiment >= 15) {return 5;}
+
+ACTIVITY 3:
+3: indexOf returns the index of a value in a String, while substring returns 
+    part of a String from the first specified index to the last specified index.
+    These methods can make two substrings separated at indexOf whatever value
+    they should be separated by. It is important to add 1 to the position of the 
+    space to account for the * that was added to each adjective in the review.
+5: Static methods are specific to their class, while non static methods do not 
+    belong to any class.
+6: I could remove the part that assigns random adjectives to replace each adjective.
+    Instead, I could just assign positive adjectives to replace all adjectives found.
+
+ACTIVITY 4:
+1: One may want to autogenerate a bad review if they are trying to decrease 
+    the ratings of someone/something.
+2: One may want to autogenerate a good review if they are trying to increase 
+    the ratings of someone/something.
+3: To make the method better, it could assign random pos adjectives for existing
+    pos adjectives, and vice versa with neg adjectives.
+5: This statement sets oneWord to oneWord after the first character (hello -> ello)
+6: It was necessary to remove the * because methods such as sentimentVal would think
+    the * is part of the word, which may mess up the code.
+7: This method could be modified to create a super positive review by using positive 
+    adjectives with the highest sentimentVal.
