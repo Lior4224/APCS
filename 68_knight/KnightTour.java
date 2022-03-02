@@ -176,7 +176,7 @@ class TourFinder
 
       System.out.println( this ); //refresh screen
 
-      delay(1000); //uncomment to slow down enough to view probings
+      //delay(1000); //uncomment to slow down enough to view probings
 
       /******************************************
        * Recursively try to "solve" (find a tour) from
