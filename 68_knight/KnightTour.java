@@ -152,7 +152,7 @@ class TourFinder
    **/
   public void findTour( int x, int y, int moves )
   {
-    delay(50); //slow down enough to make "backtracking" visible
+    //delay(50); //slow down enough to make "backtracking" visible
 
     //if a tour has been completed, stop animation
     if ( _solved ) System.exit(0);
