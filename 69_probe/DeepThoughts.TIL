@@ -1,8 +1,8 @@
-// Lior Polischouk, 
-// APCS pd7
-// HW69 -- Knights Tour notes
-// 2022-03-02m
-// time spent:  hrs
+TNPG: JLN | Nakib Abedin, Justin Mohabir, Lior Polischouk
+APCS pd07
+HW69 – Making Sense
+2022-03-03r
+Time Spent: .8 hr
 
 q0: From any starting position, an open tour can't always be found. In a 5x5 grid, with a starting position of 
     [0][1], no solution can be found, and therefore no tour (open or closed) can be found.
