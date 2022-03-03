@@ -20,8 +20,8 @@
  * QCC
  *
  * Mean execution times for boards of size n*n:
- * n=5   __s    across __ executions
- * n=6   __s    across __ executions
+ * n=5   3.047s    across 5 executions
+ * n=6   99.812s    across 3 executions
  * n=7   __s    across __ executions
  * n=8   __s    across __ executions
  *
