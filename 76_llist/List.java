@@ -5,6 +5,12 @@
  * 
  * If placed in current working dir, will be consulted instead of
  *  built-in Java library interface.
+ * 
+ * Team PJOLLN (Neil Lin, Lior Polischouk, Joseph Othman)
+ * APCS
+ * HW 76: LList
+ * 2022-3-14
+ * time spent: 40 mins
  **/
 
 public interface List
