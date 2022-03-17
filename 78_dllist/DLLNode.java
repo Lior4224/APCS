@@ -15,7 +15,7 @@ public class DLLNode
     public DLLNode( String value, DLLNode next, DLLNode prev) {
 	     _cargo = value;
 	     _nextNode = next;
-        _prevNode = prev;
+       _prevNode = prev;
     }
 
 
