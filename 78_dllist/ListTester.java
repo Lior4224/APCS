@@ -10,7 +10,7 @@ public class ListTester
 {
   public static void main( String[] args ) 
   {
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     //instantiate... var type List, obj type LList
     List wu = new LList();
@@ -54,7 +54,7 @@ public class ListTester
     wu.remove(n);
     System.out.println("Updated list: " + wu);
     }
-    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }//end main()
 
 }//end class

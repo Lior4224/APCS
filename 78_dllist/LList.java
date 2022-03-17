@@ -9,12 +9,14 @@ public class LList implements List //your List interface must be in same dir
 
   //instance vars
   private DLLNode _head;
+  private DLLNode _tail;
   private int _size;
 
   // constructor -- initializes instance vars
   public LList( )
   {
     _head = null; //at birth, a list has no elements
+    _tail = null;
     _size = 0;
   }
 
@@ -23,7 +25,7 @@ public class LList implements List //your List interface must be in same dir
 
   public boolean add( String newVal )
   {
-    DLLNode tmp = new LLNode( newVal, _head );
+    DLLNode tmp = new DLLNode( newVal, _tail, _head );
     _head = tmp;
     _size++;
     return true;
@@ -80,7 +82,7 @@ public class LList implements List //your List interface must be in same dir
     if ( index < 0 || index >= size() )
 	    throw new IndexOutOfBoundsException();
 
-    DLLNode newNode = new LLNode( newVal, null );
+    DLLNode newNode = new DLLNode( newVal, null, null );
 
     //if index==0, insert node before head node
     if ( index == 0 )
@@ -92,9 +94,12 @@ public class LList implements List //your List interface must be in same dir
 	    for( int i=0; i < index-1; i++ )
         tmp = tmp.getNext();
 
+        DLLNode tmp2 = tmp.getNext();
 	    //insert new node
-	    newNode.setNext( tmp.getNext() );
+	    newNode.setNext( tmp2 );
+      newNode.setPrev( tmp );
 	    tmp.setNext( newNode );
+      tmp2.setPrev( newNode );
 
 	    //increment size attribute
 	    _size++;
@@ -129,6 +134,7 @@ public class LList implements List //your List interface must be in same dir
 
 	    //remove target node
 	    tmp.setNext( tmp.getNext().getNext() );
+      tmp.getNext().setPrev( tmp );
     }
 
     //decrement size attribute
