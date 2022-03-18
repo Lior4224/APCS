@@ -6,8 +6,8 @@
 
 /**
 ALGO:
-Recursively shrink the array that we're looking in until the pivot position is equal to y-1,
-in which case we've found our desired element. To do this,
+Recursively shrink the array that we're looking in until the array becomes
+length 1, in which case sorted and we've found our desired element. To do this,
 take a = lo, b = hi-1, c = hi-1 (the last element in the array we are searching),
 and run the method. Then, compare the index, x of the final resting place of the pivot
 and y-1; if x > y - 1, then restrict the search array to the left partition of the
@@ -44,7 +44,7 @@ element from the sorted list?
 
 
 
-public class FastSelect {
+public class QuickSelect {
 
   // Helper methods copied from yesterday's hw
   public static void swap( int x, int y, int[] o )

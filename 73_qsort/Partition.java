@@ -81,8 +81,29 @@ public class Partition
    * @return int position of
    *
    */
-  public static int partition( int arr[], int loPos, int hiPos, int pvtPos)
+  public static int partition( int arr[], int loPos, int hiPos)
   {
+    int pvtPos;
+    // Let's choose 3 elements and take their median. This will correspond to the pivot element.
+    // This helps in avoiding the worst case, most of the time; this is not deterministic, so
+    // On average this works pretty fast.
+
+    int x = loPos + (int) (Math.random()*(hiPos-loPos+1));
+    int y = loPos + (int) (Math.random()*(hiPos-loPos+1));
+    int z = loPos + (int) (Math.random()*(hiPos-loPos+1));
+
+    if((x < y && y < z) || (x > y && y > z)) {
+      pvtPos = y;
+    }
+
+    else if ((x < z && z < y) || (x > z && z > y)) {
+      pvtPos = z;
+    }
+
+    else {
+      pvtPos = x;
+    }
+
     int v = arr[pvtPos];
 
     swap( pvtPos, hiPos, arr);
@@ -104,7 +125,7 @@ public class Partition
   {
 
     //init test arrays of magic numbers
-    int[] arr1 = {8,21,17,69,343, 72, 81, 9, 7, 2, 3, 6, 1, 5, 2, 18};
+    int[] arr1 = {8,21,17,69,343};
     int[] arr3 = {1,28,33,4982,37};
     int[] arr4 = {5,4,17,9000,6};
     int[] arr5 = {3,0,16,599,1024};
@@ -112,41 +133,41 @@ public class Partition
 
     // run partition on each array,
     // holding loPos & hiPos fixed, varying pvtPos...
-    for( int testPIVOT = 0; testPIVOT < arr1.length; testPIVOT++ ) {
-      System.out.println("arr1: ");
-      printArr(arr1);
-      partition(arr1,0,4,testPIVOT);
-      System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
-                         + testPIVOT +"...");
-      printArr(arr1);
-      System.out.println("-----------------------");
-
-      // System.out.println("arr3:");
-      // printArr(arr3);
-      // partition(arr3,0,4,testPIVOT);
-      // System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
-      //                    + testPIVOT +"...");
-      // printArr(arr3);
-      // System.out.println("-----------------------");
-      //
-      // System.out.println("arr4:");
-      // printArr(arr4);
-      // partition(arr4,0,4,testPIVOT);
-      // System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
-      //                    + testPIVOT +"...");
-      // printArr(arr4);
-      // System.out.println("-----------------------");
-      //
-      // System.out.println("arr5:");
-      // printArr(arr5);
-      // partition(arr5,0,4,testPIVOT);
-      // System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
-      //                    + testPIVOT +"...");
-      // printArr(arr5);
-      // System.out.println("-----------------------");
+    // for( int testPIVOT = 0; testPIVOT < 5; testPIVOT++ ) {
+    //   System.out.println("arr1: ");
+    //   printArr(arr1);
+    //   partition(arr1,0,4,testPIVOT);
+    //   System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
+    //                      + testPIVOT +"...");
+    //   printArr(arr1);
+    //   System.out.println("-----------------------");
+    //
+    //   System.out.println("arr3:");
+    //   printArr(arr3);
+    //   partition(arr3,0,4,testPIVOT);
+    //   System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
+    //                      + testPIVOT +"...");
+    //   printArr(arr3);
+    //   System.out.println("-----------------------");
+    //
+    //   System.out.println("arr4:");
+    //   printArr(arr4);
+    //   partition(arr4,0,4,testPIVOT);
+    //   System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
+    //                      + testPIVOT +"...");
+    //   printArr(arr4);
+    //   System.out.println("-----------------------");
+    //
+    //   System.out.println("arr5:");
+    //   printArr(arr5);
+    //   partition(arr5,0,4,testPIVOT);
+    //   System.out.println("after partition w/ loPos=0, hiPos=4, pvtPos="
+    //                      + testPIVOT +"...");
+    //   printArr(arr5);
+    //   System.out.println("-----------------------");
       /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    }
+    // }
   }//end main
 
 }//end class Partition
