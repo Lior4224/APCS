@@ -1,0 +1,9 @@
+
+
+ACTIVITY 2:
+Q1: A deck is an ArrayList with any number of cards in it.
+Q2: this deck has 6 cards.
+Q3: ranks: ["ace", "king", "queen", "jack", "10", "9", "8", "7", "6", "5", "4", "3", "2"]
+    suits: ["spades", "hearts", "diamonds", "clubs"]
+    pointValues:[11, 10, 10, 10, 10, 9, 8, 7, 6, 5, 4, 3, 2]
+Q4: PointValues have to be after ranks, since they correspond to the respective ranks.

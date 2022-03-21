@@ -8,6 +8,7 @@ public class CardTester {
 	 *	@param args is not used.
 	 */
 	public static void main(String[] args) {
+
 		Card perry = new Card("perry", "perry", 1);
 		Card lior = new Card("perry", "perry", 1);
 		Card lawrence = new Card("perry", "perry", 2);
