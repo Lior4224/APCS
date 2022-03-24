@@ -13,7 +13,7 @@ public class ListTester
     /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
     //instantiate... var type List, obj type LList
-    List wu = new LList();
+    LList<String> wu = new LList<String>();
 
     System.out.println(wu);
     wu.add(5);
