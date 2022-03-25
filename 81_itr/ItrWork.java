@@ -30,8 +30,8 @@ public class ItrWork
   public static boolean foundA( Integer key,
                                 List<Integer> L )
   {
-    for (int n : L) {
-      if (n == key) {
+    for (Integer n : L) {
+      if (n.equals(key)) {
         return true;
       }
     }
@@ -43,21 +43,41 @@ public class ItrWork
   public static boolean foundB( Integer key,
                                 List<Integer> L )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    Iterator<Integer> iter = L.iterator();
+    while (iter.hasNext()) {
+      if (iter.next().equals(key)) {
+        return true;
+      }
+    }
+    return false;
   }
 
   //using FOREACH loop
   //returns a list containing the odd numbers in L
   public static List<Integer> oddsA( List<Integer> L )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    List<Integer> output = new ArrayList<Integer>();
+    for (Integer n : L) {
+      if (n % 2 == 1) {
+        output.add(n);
+      }
+    }
+    return output;
   }
 
   //explicitly using an iterator
   //returns a list containing the odd numbers in L
   public static List<Integer> oddsB( List<Integer> L )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    Iterator<Integer> iter = L.iterator();
+    List<Integer> output = new ArrayList<Integer>();
+    while (iter.hasNext()) {
+      Integer x = iter.next();
+      if (x % 2 == 1) {
+        output.add(x);
+      }
+    }
+    return output;
   }
 
 
@@ -65,7 +85,12 @@ public class ItrWork
   //modifies L s.t. it contains no evens
   public static void removeEvens( List<Integer> L )
   {
-    /*** YOUR IMPLEMENTATION HERE ***/
+    Iterator<Integer> iter = L.iterator();
+    while (iter.hasNext()) {
+      if (iter.next() % 2 == 0) {
+        iter.remove();
+      }
+    }
   }
 
 
@@ -74,7 +99,7 @@ public class ItrWork
 
 
     //var type: List   obj type: ?
-    LList<Integer> L = new LList<Integer>();
+    List<Integer> L = new ArrayList<Integer>();
 
     for( int i = 0; i < 10; i++ ) {
       L.add(i);
@@ -88,12 +113,15 @@ public class ItrWork
     }
 
     // b) explicitly using an iterator
-
+    Iterator<Integer> iter = L.iterator();
+    while(iter.hasNext()) {
+      System.out.print(iter.next() + " ");
+    }
 
     System.out.println("\nTesting foundA...");
     System.out.println("9 in L? -> " + foundA(9,L) );
     System.out.println("13 in L? -> " + foundA(13,L) );
-    /*~~~~~~~~~~~~~~~m~o~v~e~~m~e~~d~o~w~n~~~~~~~~~~~~~~
+    
     System.out.println("\nTesting foundB...");
     System.out.println("9 in L? -> " + foundB(9,L) );
     System.out.println("13 in L? -> " + foundB(13,L) );
@@ -109,6 +137,7 @@ public class ItrWork
     System.out.println("\nTesting removeEvens...");
     removeEvens(L);
     for( int n : L ) System.out.println(n);
+    /*~~~~~~~~~~~~~~~m~o~v~e~~m~e~~d~o~w~n~~~~~~~~~~~~~~
       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
   }//end main
