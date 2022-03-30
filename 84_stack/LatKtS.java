@@ -56,7 +56,7 @@ public class LatKtS
           // Case 1: nextChar == "}"
           if(nextChar.equals("}")) {
             if( justPopped.equals("[") || justPopped.equals("(")) {
-              return false;
+              return false;3 -- Stacks on Stacks (on Stacks. Creating a stack (which is an ADT, or Abstract Data Type))
             }
           }
           // Case 2: nextChar == ")"
