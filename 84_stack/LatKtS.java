@@ -16,12 +16,14 @@ public class LatKtS
   public static String flip( String s )
   {
     String output = "";
-    Latkes tastyStack = new Latkes(s.length())
+    Latkes tastyStack = new Latkes(s.length());
     for (int i = 0; i < s.length(); i++) {
       tastyStack.push(s.substring(i, i+1));
     }
-    for ()
-    output += pop();
+    for (int j = 0; j < s.length(); j++){
+      output += tastyStack.pop();
+    }
+    return output;
   }
 
 
@@ -33,13 +35,47 @@ public class LatKtS
    **/
   public static boolean allMatched( String s )
   {
+    Latkes tastyString = new Latkes ( s.length() );
+    for(int i = 0; i < s.length(); i++) {
+      String nextChar = s.substring(i,i+1);
+      if( (nextChar.equals("{")) || (nextChar.equals("(")) || (nextChar.equals("[")) ) {
+        tastyString.push( nextChar );
+      }
+      else {
+        if( tastyString.isEmpty() ) {
+          return false;
+        }
+        else {
+          String justPopped = tastyString.pop();
+          // Case 1: nextChar == "}"
+          if(nextChar.equals("}")) {
+            if( justPopped.equals("[") || justPopped.equals("(")) {
+              return false;
+            }
+          }
+          // Case 2: nextChar == ")"
+          else if(nextChar.equals(")")) {
+            if( justPopped.equals("[") || justPopped.equals("{")) {
+              return false;
+            }
+          }
+          // Case 3: nextChar == "]"
+          else if(nextChar.equals("]")) {
+            if( justPopped.equals("{") || justPopped.equals("(")) {
+              return false;
+            }
+          }
+        }
+      }
+    }
+    return (tastyString.isEmpty());
   }
+
 
 
   //main method to test
   public static void main( String[] args )
   {
-    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
     System.out.println(flip("stressed"));
     System.out.println(allMatched( "({}[()])" )); //true
     System.out.println(allMatched( "([)]" ) ); //false
@@ -47,6 +83,7 @@ public class LatKtS
     System.out.println(allMatched( "](){([])}" ) ); //false
     System.out.println(allMatched( "(){([])}(" ) ); //false
     System.out.println(allMatched( "()[[]]{{{{((([])))}}}}" ) ); //true
+    /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
   }
 
