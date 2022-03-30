@@ -3,6 +3,12 @@
  * SKELETON
  * driver class for Latkes
  * Uses a stack to reverse a text string, check for sets of matching parens.
+
+ Team PJOLLN: Neil Lin, Lior Polischouk, Joseph Othman
+ APCS pd7
+ HW84 - Stacks: flip and allMatched
+ 2022-03-29
+ time spent: 0.5 hrs
  **/
 
 public class LatKtS
