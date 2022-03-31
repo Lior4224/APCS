@@ -5,16 +5,6 @@
  * Implements a stack of Strings using an encapsulated arrayList
  **/
 
-/***
-Team PJOLLN: Neil Lin, Lior Polischouk, Joseph Othman
-APCS pd7
-HW85
-2022-03-30
-time spent: 0.5 hrs
-
-    DISCO
-
- **/
 import java.util.ArrayList;
 
 public class ALStack<T> implements Stack<T>
@@ -29,7 +19,7 @@ public class ALStack<T> implements Stack<T>
     _stack = new ArrayList<T>(initCapacity);
     _stackSize = 0;
 
-  }// O(?) always
+  }// O(1) always
 
 
   //means of insertion
@@ -37,22 +27,34 @@ public class ALStack<T> implements Stack<T>
   {
     _stack.add(s);
     _stackSize ++;
-  }// O(?)
+  }// O(1) amoritzied, O(n) worst case.
 
 
   //means of removal
   public T pop( )
   {
-    T retT = _stack.get(_stackSize - 1);
-    _stack.remove(_stackSize-1);
-    _stackSize --;
+    T retT;
+    if(_stackSize > 0) {
+      retT = _stack.get(_stackSize - 1);
+      _stack.remove(_stackSize-1);
+      _stackSize --;
+    }
+    else {
+      retT = null;
+    }
     return retT;
-  }// O(?)
+  }// O(1)
 
   public T peekTop( ){
-    T retT = _stack.get(_stackSize - 1);
+    T retT;
+    if(_stackSize > 0) {
+      retT = _stack.get(_stackSize - 1);
+    }
+    else {
+      retT = null;
+    }
     return retT;
-  }
+  }// O(1)
 
 
   //chk for emptiness

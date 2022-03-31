@@ -1,75 +1,60 @@
 /***
- * class Latkes
+ * class LLStack
  * v1
- * SKELETON
- * Implements a stack of Strings using an encapsulated array
+ * SKELETONTR
+ * Implements a stack of Strings using an encapsulated linkedList
  **/
 
-/***
-Team PJOLLN: Neil Lin, Lior Polischouk, Joseph Othman
-APCS pd7
-HW83 -- Stacks on Stacks (on Stacks. Creating a stack (which is an ADT, or Abstract Data Type))
-2022-03-28
-time spent: 0.5 hrs
+import java.util.LinkedList;
 
-    DISCO
-    - Class Latkes operates very similarly to the ArrayList that we created earlier (Superarray).
-    Is this the intention of the assignment?
-
-    QCC
-    - Add to left side of array or right side? When creating this, we followed the maxim of
-    Make life easy (paraphrased from class on linked lists), which was adding to the right side.
-    - Why does the main method print an initial "null"?
- **/
-
-
-public class Latkes
+public class LLStack<T> implements Stack<T>
 {
-  private String [] _stack;
+  private LinkedList<T> _stack;
   private int _stackSize;
 
 
   //constructor
-  public Latkes( int initCapacity )
+  public LLStack( )
   {
-    _stack = new String[initCapacity];
+    _stack = new LinkedList<T>();
     _stackSize = 0;
 
   }// O(1) always
 
 
   //means of insertion
-  public void push( String s )
+  public void push( T s )
   {
-    if (_stackSize < _stack.length) {
-    _stack[_stackSize] = s;
+    _stack.add(s);
     _stackSize ++;
-    }
-    else {
-      String[] newStack = new String[_stackSize*2];
-      for(int i = 0; i < _stackSize; i++) {
-        newStack[i] = _stack[i];
-      }
-      _stack = newStack;
-      _stack[_stackSize] = s;
-      _stackSize ++;
-    }
-  }// O(n) worst case, O(1) amoritized.
+  }// O(1)
 
 
   //means of removal
-  public String pop( )
+  public T pop( )
   {
-    if( !isEmpty() ) {
-      String _temp = _stack[_stackSize-1];
-      _stack[_stackSize-1] = null;
+    T retT;
+    if(_stackSize > 0) {
+      retT = _stack.get(_stackSize - 1);
+      _stack.remove(_stackSize-1);
       _stackSize --;
-      return _temp;
     }
     else {
-      return null;
+      retT = null;
     }
-  }// O(1) always
+    return retT;
+  }// O(n)
+
+  public T peekTop( ){
+    T retT;
+    if(_stackSize > 0) {
+      retT = _stack.get(_stackSize - 1);
+    }
+    else {
+      retT = null;
+    }
+    return retT;
+  }// O(1)
 
 
   //chk for emptiness
@@ -82,7 +67,7 @@ public class Latkes
   //chk for fullness
   public boolean isFull()
   {
-    return (_stackSize == _stack.length);
+    return (_stackSize == _stack.size());
   }// O(1) always
 
 
@@ -90,7 +75,7 @@ public class Latkes
   public static void main( String[] args )
   {
 
-    Latkes tastyStack = new Latkes(10);
+    LLStack tastyStack = new LLStack();
     tastyStack.push("aoo");
     tastyStack.push("boo");
     tastyStack.push("coo");
