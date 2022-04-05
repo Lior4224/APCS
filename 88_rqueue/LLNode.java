@@ -10,14 +10,14 @@
  * time spent: 40 mins
  **/
 
-public class LLNode
+public class LLNode<T>
 {
   //instance vars
-  public String cargo;
+  public T cargo;
   public LLNode nextNode;
   
   // constructor
-  public LLNode( String value, LLNode next )
+  public LLNode( T value, LLNode<T> next )
   {
     cargo = value;
     nextNode = next;
@@ -25,12 +25,12 @@ public class LLNode
 
 
   //--------------v  ACCESSORS  v--------------
-  public String getCargo()
+  public T getCargo()
   {
     return cargo;
   }
 
-  public LLNode getNext()
+  public LLNode<T> getNext()
   {
     return nextNode;
   }
@@ -38,13 +38,13 @@ public class LLNode
 
 
   //--------------v  MUTATORS  v--------------
-  public String setCargo( String newCargo )
+  public T setCargo( T newCargo )
   {
     cargo = newCargo;
     return cargo;
   }
 
-  public LLNode setNext( LLNode newNext )
+  public LLNode<T> setNext( LLNode<T> newNext )
   {
     nextNode = newNext;
     return nextNode;

@@ -15,34 +15,32 @@
  **/
 
 
-public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
+public class RQueue<T> implements Queue<T>
 {
   //instance variables
-  private LLNode<SWASHBUCKLE> _front, _end;
+  private LLNode<T> _front, _end;
   private int _size;
 
 
   // default constructor creates an empty queue
   public RQueue()
   {
-
+    _front = _end = new LLNode<T>(null,null);
+    _size = 0;
   }
 
 
   public void enqueue( T enQVal )
   {
-    Node newNode = new Node( enQVal, null);
-    if(_queueSize == 0) {
-      _first = newNode;
+    LLNode<T> newNode = new LLNode( enQVal, null);
+    if(isEmpty()) {
+      _front = _end = newNode;
     }
     else {
-      Node temp = _first;
-      while( temp.getNext() != (null) ) {
-        temp = temp.getNext();
-      }
-      temp.setNext( newNode );
+      _end.setNext(newNode);
+      _end = _end.getNext();
     }
-    _queueSize++;
+    _size++;
   }//O(?)
 
 
@@ -64,7 +62,7 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
 
   public T peekFront()
   {
-
+    return _front.getCargo();
   }//O(?)
 
 
@@ -75,7 +73,10 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
    **/
   public void sample ()
   {
-
+    int rand = (int)(Math.random() * _size);
+    for (int i = 0; i < rand; i++) {
+      enqueue(dequeue());
+    }
   }//O(?)
 
 
@@ -88,7 +89,13 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   // print each node, separated by spaces
   public String toString()
   {
-
+    String retStr = "";
+    LLNode<T> temp = _front;
+    while(temp != null) {
+      retStr += temp.getCargo() + " ";
+      temp = temp.getNext();
+    }
+    return retStr;
   }//end toString()
 
 
@@ -97,7 +104,7 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
   public static void main( String[] args )
   {
 
-      /*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
+      
 
     Queue<String> PirateQueue = new RQueue<String>();
 
@@ -123,7 +130,7 @@ public class RQueue<SWASHBUCKLE> implements Queue<SWASHBUCKLE>
     System.out.println("\nnow dequeuing fr empty queue...\n" +
                        "(expect NPE)\n");
     System.out.println( PirateQueue.dequeue() );
-
+/*v~~~~~~~~~~~~~~MAKE MORE~~~~~~~~~~~~~~v
       ^~~~~~~~~~~~~~~~AWESOME~~~~~~~~~~~~~~~^*/
 
   }//end main
