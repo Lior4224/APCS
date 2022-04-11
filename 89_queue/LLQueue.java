@@ -1,18 +1,15 @@
 /***
 Team PJOLLN: Neil Lin, Lior Polischouk, Joseph Othman
 APCS pd7
-HW87 -- The English Do Not Wait In Line for Soup
-2022-04-03
+HW89
+2022-04-11
 time spent: 0.5 hrs
 
 DISCO:
-- Queues follow the FIFO formula, meaning that the first thing entered is the first
-thing leaving.
-- Queues are basically just backwards linked lists. We add behind instead of at the
-front, and we pop off the front instead of the back.
+-
 
 QCC:
-- When to use queue vs llist vs stack?
+- 
 
 **/
 
