@@ -1,118 +1,54 @@
 /***
 Team PJOLLN: Neil Lin, Lior Polischouk, Joseph Othman
 APCS pd7
-HW89
+HW89 --
 2022-04-11
-time spent: 0.5 hrs
+time spent: 0.4 hrs
 
 DISCO:
--
+- "push-thru" code is where we use the funcitonality of a different class to do
+all the work for us.
+- Hypothesis: Linked Lists work better with queues, since we can enqueue and dequeue
+both in O(1) time.
 
 QCC:
-- 
+- When to use AL or LL queues as opposed to the other queues we coded?
 
 **/
+import java.util.LinkedList;
 
 public class LLQueue<T> implements Queue<T> {
-
-  private class Node
-  {
-    //instance vars
-    private T _cargo;
-    private Node _nextNode;
-
-    // constructor
-    public Node( T value, Node next )
-    {
-      _cargo = value;
-      _nextNode = next;
-    }
-
-
-    //--------------v  ACCESSORS  v--------------
-    public T getCargo()
-    {
-      return _cargo;
-    }
-
-    public Node getNext()
-    {
-      return _nextNode;
-    }
-    //--------------^  ACCESSORS  ^--------------
-
-
-    //--------------v  MUTATORS  v--------------
-    public T setCargo( T newCargo )
-    {
-      T foo = getCargo();
-      _cargo = newCargo;
-      return foo;
-    }
-
-    public Node setNext( Node newNext )
-    {
-      Node foo = getNext();
-      _nextNode = newNext;
-      return foo;
-    }
-    //--------------^  MUTATORS  ^--------------
-  }
-
-  Node _first;
-  int _queueSize;
+  LinkedList<T> L = new LinkedList<T>();
 
   public T dequeue() {
-    if( _queueSize == 0 ) {
-      return null;
-    }
-    else {
-      T retVal = _first.getCargo();
-      _first = _first.getNext();
-      _queueSize--;
-      return retVal;
-    }
+    T retVal = L.get(0);
+    L.remove();
+    return retVal;
   }
 
   public void enqueue( T x ) {
-    Node newNode = new Node( x, null);
-    if(_queueSize == 0) {
-      _first = newNode;
-    }
-    else {
-      Node temp = _first;
-      while( temp.getNext() != (null) ) {
-        temp = temp.getNext();
-      }
-      temp.setNext( newNode );
-    }
-    _queueSize++;
+    L.add(x);
   }
 
   public boolean isEmpty() {
-    return ( _queueSize == 0 );
+    return (L.size() == 0);
   }
 
   public T peekFront() {
-    return _first.getCargo();
+    T retVal = L.get(0);
+    return retVal;
   }
 
   public String toString() {
-    Node temp = _first;
-    String retVal = "";
-    while( temp.getNext() != (null) ) {
-      retVal += temp.getCargo() + " ";
-      temp = temp.getNext();
-    }
-    retVal += temp.getCargo();
-    return retVal;
+    String k = L.toString();
+    return k;
   }
 
 
 
   public static void main(String[] args) {
 
-    LLQueue<Integer> Adi = new LLQueue<Integer>();
+    Queue<Integer> Adi = new LLQueue<Integer>();
     Adi.enqueue(1);
     Adi.enqueue(2);
     Adi.enqueue(3);
@@ -127,7 +63,7 @@ public class LLQueue<T> implements Queue<T> {
     }
 
 
-    LLQueue<String> wu = new LLQueue<String>();
+    Queue<String> wu = new LLQueue<String>();
     wu.enqueue("RZA");
     wu.enqueue("GZA");
     wu.enqueue("ODB");
