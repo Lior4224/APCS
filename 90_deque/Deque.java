@@ -25,6 +25,3 @@ public interface Deque<T> {
 
   public int size();
 }
-public class QQKachoo<T> implements Deque<T> {
-  
-}
