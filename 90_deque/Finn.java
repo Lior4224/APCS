@@ -25,11 +25,15 @@ public class Finn<T> implements Deque<T> {
   }
 
   public T removeFirst(){
+    T retVal = (T) jake.getFirst();
     jake.remove(0);
+    return retVal;
   }
 
   public T removeLast(){
+    T retVal = (T) jake.getLast();
     jake.remove(jake.size() - 1);
+    return retVal;
   }
 
   public T getFirst(){
@@ -49,14 +53,9 @@ public class Finn<T> implements Deque<T> {
   }
 
   public String toString(){
-    String output = "List: ";
-    LinkedList jeff = new LinkedList<T>();
-
-    while (_stringNode != null) {
-      output += (_stringNode.getCargo() + " ");
-      _stringNode = _stringNode.getNext();
-    }
-    output += "null";
+    String output = "Front --> ";
+    output += jake.toString();
+    output += " <-- Back";
     return output;
   }
 }
