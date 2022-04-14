@@ -13,28 +13,26 @@ QCC:
 
 public class MRKPirateBae  {
   public static void main(String[] args) {
-    public Finn<Integer> jake = new Finn<Integer>();
-    System.out.println(jake.addFirst(1));
-    System.out.println(jake.addFirst(2));
-    System.out.println(jake.addFirst(3));
-    System.out.println(jake.addFirst(4));
-    System.out.println(jake.addFirst(5));
-    System.out.println(jake.addLast(6));
-    System.out.println(jake.addLast(7));
-    System.out.println(jake.addLast(8));
-    System.out.println(jake.addLast(9));
-    System.out.println(jake.addLast(10));
-    System.out.println(jake.toString());
+    Finn<Integer> elevens = new Finn<Integer>();
+    elevens.addFirst(1);
+    elevens.addFirst(2);
+    elevens.addFirst(3);
+    elevens.addFirst(4);
+    elevens.addFirst(5);
+    elevens.addLast(6);
+    elevens.addLast(7);
+    elevens.addLast(8);
+    elevens.addLast(9);
+    elevens.addLast(10);
+    System.out.println(elevens);
 
-    System.out.println(jake.removeFirst());
-    System.out.println(jake.removeLast());
-    System.out.println(jake.toString());
+    System.out.println(elevens.removeFirst());
+    System.out.println(elevens.removeLast());
+    System.out.println(elevens);
 
-    System.out.println(jake.getFirst());
-    System.out.println(jake.getLast());
-    System.out.println(jake.size());
-    System.out.println(jake.isEmpty());
-
-
+    System.out.println(elevens.getFirst());
+    System.out.println(elevens.getLast());
+    System.out.println(elevens.size());
+    System.out.println(elevens.isEmpty());
   }
 }
