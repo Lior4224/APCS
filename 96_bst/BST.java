@@ -1,8 +1,8 @@
 /**
   Team Cookie (Justin Mohabir, Lawrence Joa, Lior)
   APCS pd7
-  HW95 -- Algorithm as Data Structure
-  2022-05-09m
+  HW96
+  2022-05-10m
   time spent: 1 hrs
 
  * class BST
@@ -122,6 +122,53 @@ public class BST
     System.out.print(currNode.getValue());
   }
 
+  public TreeNode search(int x) {
+    TreeNode currNode = _root;
+    while (true) {
+      if (currNode == null) {
+        return null;
+      }
+      else if (x < currNode.getValue()) {
+        currNode = currNode.getLeft();
+      }
+      else if (x > currNode.getValue()) {
+        currNode = currNode.getRight();
+      }
+      else {
+        return currNode;
+      }
+    }
+  }
+
+  public int height() {
+    return height(_root);
+  }
+
+  public int height(TreeNode currNode) {
+    if (currNode == null) {
+      return 0;
+    }
+    else if (height(currNode.getLeft()) > height(currNode.getRight())) {
+      return (1 + height(currNode.getLeft()));
+    }
+    else {
+      return (1 + height(currNode.getRight()));
+    }
+  }
+
+  public int numLeaves(){
+    return numLeaves(_root);
+  }
+
+  public int numLeaves(TreeNode currNode) {
+    if (currNode == null) {
+      return 0;
+    }
+    else {
+      return (1 + numLeaves(currNode.getLeft()) + numLeaves(currNode.getRight()));
+    }
+  }
+
   //~~~~~~~~~~~~~^~~TRAVERSALS~~^~~~~~~~~~~~~~~~~~~~~~
   //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -155,8 +202,22 @@ public class BST
       arbol.postOrderTrav();
 
       System.out.println( "\n-----------------------------");
+      System.out.println( "height:" );
+      System.out.print( arbol.height()); 
+  
+      System.out.println( "\n-----------------------------");
+      System.out.println( "number of leaves:" );
+      System.out.print( arbol.numLeaves()); 
+  
+      System.out.println( "\n-----------------------------");
+      System.out.println( "searching for 5" );
+      System.out.print( arbol.search(5)); 
+  
+      System.out.println( "\n-----------------------------");
+      System.out.println( "searching for 10" );
+      System.out.print( arbol.search(10)); 
       /*~~~~~~~~~~~~move~me~down~~~~~~~~~~~~~~~~~~~~~~
-      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
   }
 
 }//end class
